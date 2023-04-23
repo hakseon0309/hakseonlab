@@ -1,0 +1,185 @@
+.aberrus {
+    border: 3px solid black;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+/* -------------------------------------------------- */
+.aberrus .nav {
+    background-color: var(--hc-color-aberrus-bg-1);
+    display: flex;
+    background-color:#1b1c1f;
+    height: 65px;
+    padding: 10px;
+    justify-content: center;
+}
+.aberrus .nav .bossIcon {
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid #33937F;
+}
+/* -------------------------------------------------- */
+.scrollspy {
+    background-color: var(--hc-color-aberrus-bg-2);
+    height: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+}
+/* -------------------------------------------------- */
+.bossTitle {
+    background-color: var(--hc-color-aberrus-bg-1);
+    height: 120px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.bossTitle .text {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 30px;
+}
+.bossTitle .text .raid {
+    color: bisque;
+    font-size: 0.8rem;
+}
+.bossTitle .text .boss {
+    color:darksalmon;
+    font-size: 1.5rem;
+}
+.bossTitle .text .sub {
+    color:#88898a;
+    font-size: 0.6rem;
+}
+.bossTitle .img {
+    width: 150px;
+    margin-left: auto;
+    display: flex;
+    align-items: flex-end;
+}
+/* -------------------------------------------------- */
+.difficulty {
+    background-color: var(--hc-color-aberrus-bg-2);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    height: 40px;
+}
+.difficulty .heroic {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    height: 100%;
+}
+.difficulty .mythic {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    height: 100%;
+}
+/* -------------------------------------------------- */
+.info {
+    float: right;
+    background-color: var(--hc-color-aberrus-bg-2);
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 20px;
+    color: var(--hc-color-sub);
+}
+/* -------------------------------------------------- */
+.raidSetup {
+    background-color: var(--hc-color-aberrus-bg-3);
+    height: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-left: 20px;
+    /* justify-content:left; */
+    align-items: center;
+}
+.positionIcon {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 20px;
+}
+.positionIcon img {
+    width: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+/* -------------------------------------------------- */
+.introduction {
+    background-color: var(--hc-color-aberrus-bg-3);
+    height: 50px;
+    padding-left: 20px;
+    align-items: center;
+    display: flex;
+}
+.introductionContent {
+    background-color: var(--hc-color-aberrus-bg-1);
+    padding: 20px;
+}
+/* -------------------------------------------------- */
+.mechanics {
+    background-color: var(--hc-color-aberrus-bg-3);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+.mechanicsContent {
+    background-color: var(--hc-color-aberrus-bg-1);
+    padding: 20px;
+}
+/* -------------------------------------------------- */
+.strategy {
+    background-color: var(--hc-color-aberrus-bg-3);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+.strategyContent {
+    background-color:#1b1c1f;
+    padding: 10px;
+}
+.stConTitle {
+    margin: 10px;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+/* -------------------------------------------------- */
+.nextBoss {
+    background-color: var(--hc-color-aberrus-bg-1);
+    height: 120px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.nextBoss .text {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 30px;
+}
+.nextBoss .text .next {
+    color: bisque;
+    font-size: 0.8rem;
+}
+.nextBoss .text .name {
+    color:darksalmon;
+    font-size: 1.5rem;
+}
+.nextBoss .img {
+    width: 150px;
+    margin-left: auto;
+    display: flex;
+    align-items: flex-end;
+}

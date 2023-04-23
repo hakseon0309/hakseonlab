@@ -1,38 +1,182 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@700&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+:root {
+    --hc-color-bg               :#1e1f22;   /* 30 31 34 */
+    --hc-color-sideBar          :#2b2d31;   /* 43 45 49 */
+    --hc-color-post             :#313338;   /* 49 51 56 */
+    --hc-color-clear            :#00000000;
+    --hc-color-font             :#ffffff;
+    --hc-color-sub              :#a7a7a780;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+    --hc-wow-color-warrior      :#c79c6e;
+    --hc-wow-color-paladin      :#f58cba;
+    --hc-wow-color-deathKnight  :#c41f3b;
+    --hc-wow-color-hunter       :#abd473;
+    --hc-wow-color-shaman       :#0070de;
+    --hc-wow-color-evoker       :#33937F;
+    --hc-wow-color-rogue        :#fff569;
+    --hc-wow-color-druid        :#ff7d0a;
+    --hc-wow-color-monk         :#00ff96;
+    --hc-wow-color-demonHunter  :#a330c9;
+    --hc-wow-color-priest       :#ffffff;
+    --hc-wow-color-mage         :#69ccf0;
+    --hc-wow-color-warlock      :#9482c9;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+    --hc-color-aberrus-bg-1     :rgb(25, 25, 25);
+    --hc-color-aberrus-bg-2     :rgb(30, 30, 30);
+    --hc-color-aberrus-bg-3     :rgb(35, 35, 35);
 
-.App-link {
-  color: #61dafb;
-}
+    --hc-min-width : 500px;
+    --hc-max-width : 956px;
+    --hc-min-height : 500px;
+    --hc-max-height : 956px;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    --hc-width-sideBar : 200px;
+
+    --hc-height-header : 24px;
+    --hc-post-title-height : 48px;
+}
+.warrior {
+    color: var(--hc-wow-color-warrior);
+}
+.paladin {
+    color: var(--hc-wow-color-paladin);
+}
+.deathKnight {
+    color: var(--hc-wow-color-deathKnight);
+}
+.hunter {
+    color: var(--hc-wow-color-hunter);
+}
+.shaman {
+    color: var(--hc-wow-color-shaman);
+}
+.evoker {
+    color: var(--hc-wow-color-evoker);
+}
+.rogue {
+    color: var(--hc-wow-color-rogue);
+}
+.monk {
+    color: var(--hc-wow-color-monk);
+}
+.demonHunter {
+    color: var(--hc-wow-color-demonHunter);
+}
+.priest {
+    color: var(--hc-wow-color-priest);
+}
+.mage {
+    color: var(--hc-wow-color-mage);
+}
+.warlock {
+    color: var(--hc-wow-color-warlock);
+}
+body {
+    background-color: var(--hc-color-bg);
+    color : var(--hc-color-font);
+    font-family: 'Noto Sans KR', sans-serif;
+}
+header {
+    background-color: var(--hc-color-bg);
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--hc-max-width);
+    height: var(--hc-height-header);
+    line-height: var(--hc-height-header);
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+    font-family: 'Dongle', sans-serif;
+    font-size: 1.3rem;
+    padding-top: 1px;
+    padding-left: 6px;
+}
+.container {
+    background-color: var(--hc-color-bg);
+    width: 100%;
+    max-width: 956px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    padding: 0px;
+}
+aside {
+    background-color: var(--hc-color-sideBar);
+    width: 200px;
+    height: 500px;
+    max-height: var(--hc-max-height);
+    overflow: hidden;
+    position: sticky;
+    top: var(--hc-height-header);
+    z-index: 90;
+    border-bottom-left-radius: 10px;
+    padding: 0px;
+    margin: 0px;
+}
+@media (max-width: 756px) {
+    aside {
+        display: none;
+    }
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+.banner {
+    width: 100%;
+    display: block;
+}
+.profile {
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.profile .background{
+    background-color: #212121;
+    width: 100%;
+    height: 100px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.profile .icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    border-radius: 25%;
+}
+.profile .character {
+    font-weight: bold;
+}
+.profile .server {
+    font-size: 0.75rem;
+    color: var(--hc-color-sub);
+}
+.post {
+    min-width: 550px;
+    max-width: 756px;
+}
+.post .title {
+    background-color: var(--hc-color-post);
+    height: var(--hc-post-title-height);
+    line-height: var(--hc-post-title-height);
+    border-bottom: 1px solid var(--hc-color-bg);
+    padding-left: 20px;
+    position: sticky;
+    top: var(--hc-height-header);
+    z-index: 90;
+}
+.post .content {
+    background-color: var(--hc-color-post);
+    padding: 10px;
+    height: 100%;
+}
+.post .content img {
+    max-width: 100%;
 }
