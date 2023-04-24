@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@700&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Dongle:wght@700&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 
 :root {
     --hc-color-bg               :#1e1f22;   /* 30 31 34 */
@@ -6,7 +6,8 @@
     --hc-color-post             :#313338;   /* 49 51 56 */
     --hc-color-clear            :#00000000;
     --hc-color-font             :#ffffff;
-    --hc-color-sub              :#a7a7a780;
+    --hc-color-sub              :#8d8c8e;
+    --hc-color-point-1          :#00ff96;
 
     --hc-wow-color-warrior      :#c79c6e;
     --hc-wow-color-paladin      :#f58cba;
@@ -90,7 +91,6 @@ header {
     z-index: 100;
     font-family: 'Dongle', sans-serif;
     font-size: 1.3rem;
-    padding-top: 1px;
     padding-left: 6px;
 }
 .container {

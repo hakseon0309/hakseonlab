@@ -14,10 +14,10 @@ export default function App() {
   );
 };
 function Header() {
-  const [header, setHeader] = useState("HAKSEON LAB - WLB 10.1");
+  const header = "HAKSEON LAB - WLB 10.1";
   return (
       <header>
-          { header }
+        { header }
       </header>
   );
 };

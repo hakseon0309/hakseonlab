@@ -1,29 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Dongle:wght@700&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+/* -------------------------------------------------- */
+/* Background Color */
+.aberrus .nav,
+.aberrus .bossTitle,
+.aberrus .info,
+.aberrus .introduction,
+.aberrus .mechanicsContent,
+.aberrus .strategyContent
+{
+    background-color: var(--hc-color-aberrus-bg-1);
+}
+.aberrus .scrollspy,
+.aberrus .difficulty,
+.aberrus .raidSetup,
+.aberrus .introductionContent,
+.aberrus .mechanics,
+.aberrus .strategy,
+.aberrus .nextBoss
+{
+    background-color: var(--hc-color-aberrus-bg-2);
+}
+/* -------------------------------------------------- */
 .aberrus {
     border: 3px solid black;
     display: flex;
     flex-direction: column;
-    width: 100%;
 }
 /* -------------------------------------------------- */
 .aberrus .nav {
-    background-color: var(--hc-color-aberrus-bg-1);
     display: flex;
-    background-color:#1b1c1f;
-    height: 65px;
+    height: 50px;
     padding: 10px;
     justify-content: center;
+    align-items: center;
 }
 .aberrus .nav .bossIcon {
     margin-left: 5px;
     margin-right: 5px;
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    border: 2px solid #33937F;
+    border: 2px solid var(--hc-color-point-1);
 }
 /* -------------------------------------------------- */
 .scrollspy {
-    background-color: var(--hc-color-aberrus-bg-2);
     height: 50px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -32,27 +53,30 @@
 }
 /* -------------------------------------------------- */
 .bossTitle {
-    background-color: var(--hc-color-aberrus-bg-1);
     height: 120px;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 .bossTitle .text {
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    margin-top: 5px;
+    margin-left: 20px;
 }
 .bossTitle .text .raid {
-    color: bisque;
+    color: var(--hc-color-point-1);
     font-size: 0.8rem;
+    /* font-family: 'Black Han Sans', sans-serif; */
 }
 .bossTitle .text .boss {
-    color:darksalmon;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
+    font-family: 'Black Han Sans', sans-serif;
 }
 .bossTitle .text .sub {
-    color:#88898a;
-    font-size: 0.6rem;
+    color: var(--hc-color-sub);
+    font-size: 0.7rem;
 }
 .bossTitle .img {
     width: 150px;
@@ -62,7 +86,6 @@
 }
 /* -------------------------------------------------- */
 .difficulty {
-    background-color: var(--hc-color-aberrus-bg-2);
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
@@ -86,7 +109,6 @@
 /* -------------------------------------------------- */
 .info {
     float: right;
-    background-color: var(--hc-color-aberrus-bg-2);
     height: 50px;
     display: flex;
     justify-content: flex-end;
@@ -96,7 +118,6 @@
 }
 /* -------------------------------------------------- */
 .raidSetup {
-    background-color: var(--hc-color-aberrus-bg-3);
     height: 50px;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -118,31 +139,28 @@
 }
 /* -------------------------------------------------- */
 .introduction {
-    background-color: var(--hc-color-aberrus-bg-3);
     height: 50px;
     padding-left: 20px;
     align-items: center;
     display: flex;
 }
 .introductionContent {
-    background-color: var(--hc-color-aberrus-bg-1);
     padding: 20px;
 }
 /* -------------------------------------------------- */
 .mechanics {
-    background-color: var(--hc-color-aberrus-bg-3);
     height: 50px;
     display: flex;
     align-items: center;
     padding-left: 20px;
 }
 .mechanicsContent {
-    background-color: var(--hc-color-aberrus-bg-1);
     padding: 20px;
+}
+.machanic {
 }
 /* -------------------------------------------------- */
 .strategy {
-    background-color: var(--hc-color-aberrus-bg-3);
     height: 50px;
     display: flex;
     align-items: center;
@@ -159,7 +177,6 @@
 }
 /* -------------------------------------------------- */
 .nextBoss {
-    background-color: var(--hc-color-aberrus-bg-1);
     height: 120px;
     display: grid;
     grid-template-columns: 1fr 1fr;
