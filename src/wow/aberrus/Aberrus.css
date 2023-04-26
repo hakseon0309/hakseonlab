@@ -4,6 +4,8 @@
 .bg-1 {background-color: var(--hc-color-aberrus-bg-1);}
 .bg-2 {background-color: var(--hc-color-aberrus-bg-2);}
 
+.shadowflame {color: var(--hc-wow-color-shadowflame);}
+
 .txt-bold {font-family: 'Black Han Sans', sans-serif;}
 .txt-littleBig {font-size: 1.3rem;}
 .txt-big {font-size: 1.5em;}
@@ -170,3 +172,26 @@
     margin-top: 0px;
 }
 /* -------------------------------------------------- */
+.MechanicSub {
+    background-color: var(--hc-color-aberrus-bg-2);
+    height: 30px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.MechanicSubIcon {
+    border: 2.5px solid #5b5b5b;
+    width: 30px;
+    border-radius: 7px;
+    margin-right: 10px;
+}
+.textBarInsertPhase {
+    background-color: var(--hc-color-aberrus-bg-1);
+    width: 150px;
+    height: 30px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}

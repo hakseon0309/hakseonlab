@@ -3,8 +3,8 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
 import "./Aberrus.css"
 
 const currentBoss = {
-    bossName        : "지옥벼림 카자라",
-    bossImg         : "https://www.method.gg/images/raidrace/bosses/aberrus-the-shadowed-crucible/kazzarathehellforged.png",
+    bossName        : "잊힌 실험체",
+    bossImg         : "https://www.method.gg/images/raidrace/bosses/aberrus-the-shadowed-crucible/theforgottenexperiments.png",
 }
 const publicData = {
     dungeonName     : "어둠의 도가니, 아베루스",
@@ -13,7 +13,7 @@ const publicData = {
     dealerIcon      : "https://www.method.gg/images/icons/role/dps-icon.png",
 }
 
-export default function Kazzara() {
+export default function Experiments() {
     return (        
         <div className="content">
             <div className="title">[10.1] 어둠의 도가니, 아베루스</div>
@@ -58,9 +58,9 @@ function AberrusNav() {
     return (
         <div className="aberrusNav">
             <Link to="/"><img className="bossIcon" src="img/pepe.png" alt="" style={{opacity: 0.3}}/></Link>
-            <Link to="/kazzara"><img className="bossIcon" src={bossIconList[0]} alt="" style={{opacity: 1}}/></Link>
+            <Link to="/kazzara"><img className="bossIcon" src={bossIconList[0]} alt="" style={{opacity: 0.3}}/></Link>
             <Link to="/molgoth"><img className="bossIcon" src={bossIconList[1]} alt="" style={{opacity: 0.3}}/></Link>
-            <Link to="/experimentation"><img className="bossIcon" src={bossIconList[2]} alt="" style={{opacity: 0.3}}/></Link>
+            <Link to="/experimentation"><img className="bossIcon" src={bossIconList[2]} alt="" style={{opacity: 1}}/></Link>
             <Link to="/zaqali"><img className="bossIcon" src={bossIconList[3]} alt="" style={{opacity: 0.3}}/></Link>
             <Link to="/rashok"><img className="bossIcon" src={bossIconList[4]} alt="" style={{opacity: 0.3}}/></Link>
             <Link to="/zskarn"><img className="bossIcon" src={bossIconList[5]} alt="" style={{opacity: 0.3}}/></Link>
@@ -98,7 +98,9 @@ function TextBarInsertIntro() {
     return (
         <div className="textBarInsert">
             <div className="textBarInsertInsert">
-                <p>전투 대상: 단일</p>
+                <p>전투 대상: 3명의 보스, 한번에 하나의 보스와 전투</p>
+                <p>전투 순서: 넬드리스, 타드리온, 리온투스</p>
+                <p>블러드: 타드리온</p>
             </div>
         </div>
     )
@@ -112,81 +114,66 @@ function TextBarInsertSetup() {
                     <img className="img-30 mr-1" src={publicData.tankerIcon} alt=""/>
                     <div className="count mr-1">2</div>
                     <img className="img-30 mr-1" src={publicData.healerIcon} alt=""/>
-                    <div className="count mr-1">4 / 6</div>
+                    <div className="count mr-1">4-5 / 6-7</div>
                     <img className="img-30 mr-1" src={publicData.dealerIcon} alt=""/>
-                    <div className="count">14+ / 22+</div>
+                    <div className="count">13+ / 21+</div>
                 </div>
             </div>
-
-            {/* <div className="textBarInsertInsert">
-                <p className="mb-0">우왕</p>
-            </div> */}
-
+            <div className="textBarInsertInsert">
+                <p className="mb-0">유용한 기술들: 드워프의 석화, 대규모 무효화, 범의 욕망, 자유의 축복</p>
+            </div>
         </div>
     )
 }
 function TextBarInsertMechanic() {
     return (
         <div className="textBarInsert">
-
+            <div className="textBarInsertPhase">넬드리스</div>
             <div className="textBarInsertMechanic mb-2">
                 <div className="textBarInsertMechanicTitle borbtm1">
-                    <img className="img-50 mr-1" src="https://wow.zamimg.com/images/wow/icons/large/achievment_boss_spineofdeathwing.jpg" alt=""/>
-                    <div><b className="txt-littleBig">지옥강철 학살</b></div>
+                    <img className="img-50 mr-1" src="https://wow.zamimg.com/images/wow/icons/large/ability_xavius_tormentingswipe.jpg" alt=""/>
+                    <div><b className="txt-littleBig">분쇄의 돌진</b></div>
                 </div>
                 <div className="textBarInsertMechanicDescription">
-                    <p>카자라의 생명력이 80%, 60%, 40%가 되면 공격대에 암흑불길 데미지를 입힙니다.</p>
-                    <p>매 생명력 퍼센트 단계마다 지옥불 심장의 주기가 짧아집니다.</p>
-                    <p className="mb-1">지옥강철 파편과 망령의 피를 지속적으로 회피해야합니다.</p>
-                    <div className="MechanicSub mb-1">
-                        <img className="MechanicSubIcon" src="https://wow.zamimg.com/images/wow/icons/large/inv_ragnaros_heart.jpg" alt=""/>
-                        <div className="MechanicSubName">지옥불 심장: 4초마다 공격대 피해</div>
-                    </div>
-                    <div className="MechanicSub mb-1">
-                        <img className="MechanicSubIcon" src="https://wow.zamimg.com/images/wow/icons/large/inv_10_elementalcombinedfoozles_shadowflame.jpg" alt=""/>
-                        <div className="MechanicSubName">지옥강철 파편: 4m 범위 바닥</div>
-                    </div>
-                    <div className="MechanicSub">
-                        <img className="MechanicSubIcon" src="https://wow.zamimg.com/images/wow/icons/large/ability_deathwing_bloodcorruption_earth.jpg" alt=""/>
-                        <div className="MechanicSubName">망령의 피: 3m 범위 바닥</div>
-                    </div>
+                    <p>여러 대상에게 빨간색 화살표의 표식을 부여하고 각 대상을 돌격합니다.</p>
+                    <p>30초 동안 1초마다 물리 피해 출혈 디버프를 부여합니다.</p>
+                    <p className="mb-1">경로에서 회피합니다.</p>
                 </div>
             </div>
 
             <div className="textBarInsertMechanic mb-2">
                 <div className="textBarInsertMechanicTitle borbtm1">
-                    <img className="img-50 mr-1" src="https://wow.zamimg.com/images/wow/icons/large/inv_shadowflame_groundstate.jpg" alt=""/>
-                    <div><b className="txt-littleBig">공포의 균열</b></div>
+                    <img className="img-50 mr-1" src="https://wow.zamimg.com/images/wow/icons/large/inv_weapon_hand_30.jpg" alt=""/>
+                    <div><b className="txt-littleBig">거대한 격돌</b></div>
                 </div>
                 <div className="textBarInsertMechanicDescription">
-                    <p>다수에게 5초 후 암흑불길 피해 5m 균열을 생성하는 디버프를 부여합니다.</p>
-                    <p>카자라의 매 생명력 퍼센트 단계마다 대상이 증가합니다.</p>
-                    <p className="mb-0"><b>균열은 고뇌의 광선을 유도해 서로 제거합니다.</b></p>
+                    <p>전방 부채꼴 충격파 입니다.</p>
+                    <p className="mb-0">이동해서 회피합니다.</p>
                 </div>
             </div>
 
             <div className="textBarInsertMechanic mb-2">
                 <div className="textBarInsertMechanicTitle borbtm1">
-                    <img className="img-50 mr-1" src="https://wow.zamimg.com/images/wow/icons/large/ability_mage_firestarter.jpg" alt=""/>
-                    <div><b  className="txt-littleBig">고뇌의 광선</b></div>
+                    <img className="img-50 mr-1" src="https://wow.zamimg.com/images/wow/icons/large/ability_evoker_oppressingroar.jpg" alt=""/>
+                    <div><b  className="txt-littleBig">우레와 같은 포효</b></div>
                 </div>
                 <div className="textBarInsertMechanicDescription">
-                    <p>다수에게 레이저의 추적 대상으로 하고, 경로에 바닥을 생성합니다.</p>
-                    <p className="mb-0"><b>고뇌의 광선은 균열로 유도해 서로 제거합니다.</b></p>
+                    <p className="mb-0">멀리 떨어질수록 받는 피해가 감소합니다.</p>
                 </div>
             </div>
 
             <div className="textBarInsertMechanic mb-2">
                 <div className="textBarInsertMechanicTitle borbtm1">
-                    <img className="img-50 mr-1" src="https://wow.zamimg.com/images/wow/icons/large/ability_warlock_shadowflame.jpg" alt=""/>
-                    <div><b className="txt-littleBig">지옥광선</b></div>
+                    <img className="img-50 mr-1" src="https://wow.zamimg.com/images/wow/icons/large/ability_evoker_azurestrike.jpg" alt=""/>
+                    <div><b className="txt-littleBig">마력 깃든 강타</b></div>
                 </div>
                 <div className="textBarInsertMechanicDescription">
-                    <p>카자라의 기력이 100에 도달하면, 무작위 대상에게 전방 숨결 공격합니다.</p>
-                    <p className="mb-0">경로에서 피하면 됩니다.</p>
+                    <p>탱커는 평타를 맞을 때마다 중첩되는 디버프를 얻습니다.</p>
+                    <p>인계 후 다른 플레이어와 접촉하면 공격대에게 전체 피해와 20초 동안 도트 디버프가 부여됩니다.</p>
+                    <p className="mb-0">인계마다 공격대 디버프가 중첩되지 않도록 20초 간격을 둡니다.</p>
                 </div>
             </div>
-
+            <div className="textBarInsertPhase">타드리온</div>
             <div className="textBarInsertMechanic mb-2">
                 <div className="textBarInsertMechanicTitle borbtm1">
                     <img className="img-50 mr-1" src="https://wow.zamimg.com/images/wow/icons/large/inv_icon_wingbroken07d.jpg" alt=""/>
