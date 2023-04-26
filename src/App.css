@@ -7,7 +7,7 @@
     --hc-color-clear            :#00000000;
     --hc-color-font             :#ffffff;
     --hc-color-sub              :#8d8c8e;
-    --hc-color-point-1          :#00ff96;
+    --hc-color-point-1          :#ff0000;
 
     --hc-wow-color-warrior      :#c79c6e;
     --hc-wow-color-paladin      :#f58cba;
@@ -85,7 +85,7 @@ header {
     margin-right: auto;
     max-width: var(--hc-max-width);
     height: var(--hc-height-header);
-    line-height: var(--hc-height-header);
+    /* line-height: var(--hc-height-header); */
     position: sticky;
     top: 0px;
     z-index: 100;
@@ -174,7 +174,6 @@ aside {
 }
 .post .content {
     background-color: var(--hc-color-post);
-    padding: 10px;
     height: 100%;
 }
 .post .content img {

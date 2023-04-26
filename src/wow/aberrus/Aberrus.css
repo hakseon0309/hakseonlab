@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Dongle:wght@700&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+/* -------------------------------------------------- */
+.bg-1 {background-color: var(--hc-color-aberrus-bg-1);}
+.bg-2 {background-color: var(--hc-color-aberrus-bg-2);}
+
+.txt-bold {font-family: 'Black Han Sans', sans-serif;}
+.txt-littleBig {font-size: 1.3rem;}
+.txt-big {font-size: 1.5em;}
+
+.ht-30 {height: 30px;}
+.ht-50 {height: 50px;}
+.ht-100 {height: 100px;}
+.ht-150 {height: 150px;}
+
+.p-1 {padding: 10px;}
+.p-2 {padding: 20px;}
+.pl-1 {padding-left: 10px;}
+.pl-2 {padding-left: 20px;}
+.pt-1 {padding-top: 10px;}
+.pt-2 {padding-top: 20px;}
+
+.m-1 {margin: 10px;}
+.m-2 {margin: 20px;}
+.ml-1 {margin-left: 10px;}
+.ml-2 {margin-left: 20px;}
+.mr-1 {margin-right: 10px;}
+.mr-2 {margin-right: 20px;}
+.mt-0 {margin-top: 0px;}
+.mt-1 {margin-top: 10px;}
+.mt-2 {margin-top: 20px;}
+.mb-0 {margin-bottom: 0px;}
+.mb-1 {margin-bottom: 10px;}
+.mb-2 {margin-bottom: 20px;}
+
+.d-flex {display: flex;}
+.d-grid {display: grid;}
+
+.jc-s {justify-content: start;}
+.jc-c {justify-content: center;}
+.jc-e {justify-content: end;}
+.ji-s {justify-items: start;}
+.ji-c {justify-items: center;}
+.ji-e {justify-items: end;}
+
+.ac-s {align-content: start;}
+.ac-c {align-content: center;}
+.ac-e {align-content: end;}
+.ai-s {align-items: start;}
+.ai-c {align-items: center;}
+.ai-e {align-items: end;}
+
+.img-30 {width: 30px; height: 30px;}
+.img-40 {width: 40px; height: 40px;}
+.img-50 {width: 50px; height: 50px;}
+
+.bor1 {border: 1px solid #000;}
+.bor2 {border: 2px solid #000;}
+.bor3 {border: 3px solid #000;}
+
+.borbtm1 {border-bottom: 1px solid #000;}
+.borbtm2 {border-bottom: 2px solid #000;}
+.borbtm3 {border-bottom: 3px solid #000;}
+/* -------------------------------------------------- */
+.aberrus {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid black;
+}
+.aberrus a {
+    height: 50px;
+}
+/* -------------------------------------------------- */
+.aberrusNav {
+    background-color: var(--hc-color-aberrus-bg-2);
+    padding: 10px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.aberrusNav .bossIcon {
+    width: 46px;
+    height: 46px;
+    margin-right: 10px;
+    border-radius: 50%;
+    border: 2px solid var(--hc-color-point-1);
+}
+/* -------------------------------------------------- */
+.aberrusBossTitle {
+    background-color: var(--hc-color-aberrus-bg-1);
+    height: 150px;
+    padding-left: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.aberrusBossTitleText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.aberrusBossTitleText .dungeon {
+    color: var(--hc-color-point-1);
+    font-size: 1rem;
+}
+.aberrusBossTitleText .boss {
+    font-size: 2.5rem;
+    font-family: 'Black Han Sans', sans-serif;
+}
+.aberrusBossTitle .img {
+    width: 200px;
+    display: flex;
+    align-items: flex-end;
+    margin-left: auto;
+}
+/* -------------------------------------------------- */
+.aberrusDifficulty {
+    background-color: var(--hc-color-aberrus-bg-2);
+    height: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.aberrusDifficultyText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+/* -------------------------------------------------- */
+.textBar {
+    background-color: var(--hc-color-aberrus-bg-1);
+    height: 50px;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 1.5rem;
+}
+/* -------------------------------------------------- */
+.textBarInsert {
+    background-color: var(--hc-color-aberrus-bg-2);
+    padding: 20px;
+}
+.textBarInsertPhase {
+    
+}
+/* -------------------------------------------------- */
+.textBarInsertMechanicTitle {
+    background-color: var(--hc-color-aberrus-bg-1);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+.textBarInsertMechanicTitle img {
+    border: 3px solid #5b5b5b;
+    border-radius: 10px;
+}
+.textBarInsertMechanicDescription {
+    background-color: var(--hc-color-aberrus-bg-1);
+    padding: 20px;
+    padding-top: 10px;
+    margin-top: 0px;
+}
+.textBarInsertMechanicDescription p {
+    margin-top: 0px;
+}
+/* -------------------------------------------------- */
