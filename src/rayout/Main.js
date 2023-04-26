@@ -11,6 +11,7 @@ export default function Main() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Aberrus/>}/>
+          <Route path="/aberrus" element={<Aberrus/>}/>
           <Route path="/kazzara" element={<Kazzara/>}/>
           <Route path="/molgoth" element={<Molgoth/>}/>
         </Routes>
