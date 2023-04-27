@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Dongle:wght@700&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 
 :root {
-    --hc-color-bg               :#1e1f22;   /* 30 31 34 */
+    --hc-color-bg               :#121212;   /* 30 31 34 */
     --hc-color-sideBar          :#2b2d31;   /* 43 45 49 */
     --hc-color-post             :#313338;   /* 49 51 56 */
     --hc-color-clear            :#00000000;

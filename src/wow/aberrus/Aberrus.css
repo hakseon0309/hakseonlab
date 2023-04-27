@@ -1,6 +1,180 @@
 @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Dongle:wght@700&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 
 /* -------------------------------------------------- */
+
+.aberrus {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid black;
+}
+.aberrus p {
+    margin-top: 0px;
+}
+/* -------------------------------------------------- */
+
+.aberrusNav {
+    background-color: var(--hc-color-aberrus-bg-2);
+    height: 50px;
+    padding: 10px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.aberrusNav .bossIcon {
+    width: 46px;
+    height: 46px;
+    margin-right: 10px;
+    border-radius: 50%;
+    border: 2px solid var(--hc-color-point-1);
+}
+
+/* -------------------------------------------------- */
+
+.aberrusBossTitle {
+    background-color: var(--hc-color-aberrus-bg-1);
+    height: 150px;
+    padding-left: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.aberrusBossTitleText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.aberrusBossTitleText .dungeon {
+    color: var(--hc-color-point-1);
+    font-size: 1rem;
+}
+
+.aberrusBossTitleText .name {
+    font-size: 2.5rem;
+    font-family: 'Black Han Sans', sans-serif;
+}
+
+.aberrusBossTitle .img {
+    width: 200px;
+    display: flex;
+    align-items: flex-end;
+    margin-left: auto;
+}
+
+/* -------------------------------------------------- */
+
+.aberrusDifficulty {
+    background-color: var(--hc-color-aberrus-bg-2);
+    height: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.aberrusDifficultyText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+/* -------------------------------------------------- */
+
+.aberrusBar {
+    background-color: var(--hc-color-aberrus-bg-1);
+    height: 50px;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 1.4rem;
+}
+
+/* -------------------------------------------------- */
+
+.aberrusBarInsert {
+    background-color: var(--hc-color-aberrus-bg-2);
+    padding: 20px;
+}
+
+/* -------------------------------------------------- */
+
+.mechanic {
+    margin-bottom: 20px;
+}
+
+.mechanicTitle {
+    background-color: var(--hc-color-aberrus-bg-1);
+    border-bottom: 1px solid black;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.mechanicTitle .img {
+    width: 50px;
+    border: 3px solid #5b5b5b;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.mechanicTitle .name {
+
+}
+
+.mechanicDescription {
+    background-color: var(--hc-color-aberrus-bg-1);
+    padding: 20px;
+    padding-top: 10px;
+}
+
+.MechanicSub {
+    background-color: var(--hc-color-aberrus-bg-2);
+    height: 30px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.MechanicSubIcon {
+    border: 2.5px solid #5b5b5b;
+    width: 30px;
+    border-radius: 7px;
+    margin-right: 10px;
+}
+
+/* -------------------------------------------------- */
+
+.textBarInsertPhase {
+    background-color: var(--hc-color-aberrus-bg-1);
+    width: 150px;
+    height: 30px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------------------------------------- */
 .bg-1 {background-color: var(--hc-color-aberrus-bg-1);}
 .bg-2 {background-color: var(--hc-color-aberrus-bg-2);}
 
@@ -63,135 +237,5 @@
 .borbtm1 {border-bottom: 1px solid #000;}
 .borbtm2 {border-bottom: 2px solid #000;}
 .borbtm3 {border-bottom: 3px solid #000;}
-/* -------------------------------------------------- */
-.teamName {
-    font-family: 'Black Han Sans', sans-serif;
-    font-size: 2rem;
-}
-/* -------------------------------------------------- */
-.aberrus {
-    margin: 10px;
-    display: flex;
-    flex-direction: column;
-    border: 3px solid black;
-}
-.aberrus a {
-    height: 50px;
-}
-/* -------------------------------------------------- */
-.aberrusNav {
-    background-color: var(--hc-color-aberrus-bg-2);
-    padding: 10px;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-}
-.aberrusNav .bossIcon {
-    width: 46px;
-    height: 46px;
-    margin-right: 10px;
-    border-radius: 50%;
-    border: 2px solid var(--hc-color-point-1);
-}
-/* -------------------------------------------------- */
-.aberrusBossTitle {
-    background-color: var(--hc-color-aberrus-bg-1);
-    height: 150px;
-    padding-left: 20px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-.aberrusBossTitleText {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.aberrusBossTitleText .dungeon {
-    color: var(--hc-color-point-1);
-    font-size: 1rem;
-}
-.aberrusBossTitleText .boss {
-    font-size: 2.5rem;
-    font-family: 'Black Han Sans', sans-serif;
-}
-.aberrusBossTitle .img {
-    width: 200px;
-    display: flex;
-    align-items: flex-end;
-    margin-left: auto;
-}
-/* -------------------------------------------------- */
-.aberrusDifficulty {
-    background-color: var(--hc-color-aberrus-bg-2);
-    height: 50px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-.aberrusDifficultyText {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
-}
-/* -------------------------------------------------- */
-.textBar {
-    background-color: var(--hc-color-aberrus-bg-1);
-    height: 50px;
-    padding-left: 20px;
-    display: flex;
-    align-items: center;
-    font-family: 'Black Han Sans', sans-serif;
-    font-size: 1.5rem;
-}
-/* -------------------------------------------------- */
-.textBarInsert {
-    background-color: var(--hc-color-aberrus-bg-2);
-    padding: 20px;
-}
-.textBarInsertPhase {
-    
-}
-/* -------------------------------------------------- */
-.textBarInsertMechanicTitle {
-    background-color: var(--hc-color-aberrus-bg-1);
-    padding: 10px;
-    display: flex;
-    align-items: center;
-}
-.textBarInsertMechanicTitle img {
-    border: 3px solid #5b5b5b;
-    border-radius: 10px;
-}
-.textBarInsertMechanicDescription {
-    background-color: var(--hc-color-aberrus-bg-1);
-    padding: 20px;
-    padding-top: 10px;
-    margin-top: 0px;
-}
-.textBarInsertMechanicDescription p {
-    margin-top: 0px;
-}
-/* -------------------------------------------------- */
-.MechanicSub {
-    background-color: var(--hc-color-aberrus-bg-2);
-    height: 30px;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-}
 
-.MechanicSubIcon {
-    border: 2.5px solid #5b5b5b;
-    width: 30px;
-    border-radius: 7px;
-    margin-right: 10px;
-}
-.textBarInsertPhase {
-    background-color: var(--hc-color-aberrus-bg-1);
-    width: 150px;
-    height: 30px;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-}
+/* -------------------------------------------------- */

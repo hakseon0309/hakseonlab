@@ -1,9 +1,12 @@
 import { useState } from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
-import Header from "./rayout/Header"
-import Aside from "./rayout/Aside"
-import Main from "./rayout/Main"
+import {
+  Header,
+  Aside,
+  Main,
+}
+from "./Layout"
 
 import "./App.css"
 
