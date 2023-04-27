@@ -117,9 +117,7 @@ export function MechanicSub(props) {
     return (
         <div className="MechanicSub">
             <img className="MechanicSubIcon" src={props.img} alt=""/>
-            <div className="MechanicSubName">
-            {props.name}
-            </div>
+            <div className="MechanicSubName">{props.name}</div>
         </div>
     )
 }

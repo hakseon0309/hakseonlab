@@ -26,15 +26,8 @@ export default function Aberrus() {
                 <AberrusBossTitle
                 name={"WOW LIFE BALANCE"}
                 />                
-                {/*<AberrusDifficulty/>*/}
                 <AberrusBar name="인원 구성"/>
                 <AberrusBarInsertIntro/>
-                {/* <AberrusBar name="사전 준비"/>
-                <AberrusBarInsertSetup/>
-                <AberrusBar name="던전 도감"/>
-                <AberrusBarInsertMechanic/>
-                <AberrusBar name="공략 진행"/>
-                <AberrusBarInsertStrategy/> */}
                 <NextBoss
                 next="다음 던전"
                 name="v 10.2"
@@ -48,7 +41,7 @@ function AberrusBarInsertIntro() {
     return (
         <div className="aberrusBarInsert">
             <div className="aberrusBarInsertInsert">
-                {/* <Roster/> */}
+                <Roster/>
             </div>
         </div>
     )
