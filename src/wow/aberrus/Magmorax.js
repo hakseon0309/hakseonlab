@@ -12,15 +12,15 @@ import {
     AberrusInsertBox1,
 } from "./AberrusLayout"
 
-export default function Experiments() {
+export default function Rashok() {
     return (        
         <div className="content">
             <TitleBar title="월드 오브 워크래프트 10.1 - 어둠의 도가니 아베루스"/>
             <div className="aberrus">                
-                <AberrusNav number="3"/>                
+                <AberrusNav number="7"/>                
                 <AberrusTitle
-                name="잊힌 실험체"
-                number="3"/>
+                name="마그모락스"
+                number="7"/>
                 <AberrusDifficulty/>
                 <AberrusBar name="사전 준비"/>
                 <AberrusBarInsertSetup/>                
@@ -32,20 +32,22 @@ export default function Experiments() {
                 <AberrusBarInsertStrategy/>                
                 <AberrusNext
                 next="다음 보스"
-                name="자칼리의 습격"
-                number="4"
+                name="넬타리온의 메아리"
+                number="8"
                 />                
             </div>
         </div>
     )
 }
 
+//
+
 function AberrusBarInsertSetup() {
     return (
         <div className="aberrusBarInsert">
             <AberrusInsertBox0
             title="인원 구성 : "
-            desc="특이사항 없음, 일반적인 구성"
+            desc="추가적인 힐러가 필요할 가능성 높음"
             />
         </div>
     )
@@ -55,15 +57,15 @@ function AberrusBarInsertIntro() {
         <div className="aberrusBarInsert">
             <AberrusInsertBox0
             title="전투 대상 : "
-            desc="총 3마리의 보스, 각 단일 전투"
+            desc="1 대상"
             />
             <AberrusInsertBox0
             title="피의 욕망 : "
-            desc="타드리온 (2번째 보스)"
+            desc="전투 시작"
             />
             <AberrusInsertBox0
             title="유용함 : "
-            desc="사제의 대규모 무효화, 드워프의 석화, 수도사의 범의 욕망, 성기사의 자유의 축복, 기원사의 소생하는 불꽃"
+            desc="기원사의 되감기와 구출, 성기사의 보호의 축복, 무적형 생존기, 흑마법사의 악마의 관문"
             />
         </div>
     )
@@ -73,54 +75,44 @@ function AberrusBarInsertMechanic() {
     return (
         <div className="aberrusBarInsert">
             <AberrusInsertBox1
-            img="ability_evoker_azurestrike"
-            title="마력 깃든 강타"
-            desc="평타마다 탱커에게 중첩되는 디버프를 부여합니다."
+            img="spell_fire_moltenblood"
+            title="치명적인 폭발"
+            desc="마그모락스의 기력이 100이 되면 전멸한다고 보면 됩니다."
             />
             <AberrusInsertBox1
-            img="ability_xavius_tormentingswipe"
-            title="분쇄의 돌진"
-            desc="여러 대상들에게 징표를 찍고 차례대로 돌진합니다."
+            img="spell_fire_firebolt02"
+            title="녹은 침"
+            desc="여러 대상에게 잠시 후 폭발하고 용암 웅덩이를 생성하는 디버프를 부여합니다. 밖에서 깔고 오면 됩니다."
             />
             <AberrusInsertBox1
-            img="inv_weapon_hand_30"
-            title="거대한 격돌"
-            desc="전방 충격파 입니다."
+            img="ability_rhyolith_lavapool"
+            title="용암 웅덩이"
+            desc="용암 웅덩이는 제한이 없이 점점 커집니다. 공격대원이 바닥에 올라가면 계속해서 디버프가 생기지만 크기가 줄어들면서 사라집니다. 최대 10중첩의 디버프만 쌓을 수 있고 이후 바닥의 크기를 줄일 수 없습니다."
             />
             <AberrusInsertBox1
-            img="ability_evoker_oppressingroar"
-            title="우레와 같은 포효"
-            desc="시전하면 멀리 떨어져서 받는 피해를 감소시키세요."
+            img="ability_ironmaidens_rapidfire"
+            title="타오르는 짜증"
+            desc="마그모락스가 용암 웅덩이 위에 있으면 기력이 5씩 상승합니다."
             />
             <AberrusInsertBox1
-            img="ability_socererking_arcanemines"
-            title="불안정한 정수"
-            desc="무작위 대상에게 해제가 가능한 점점 많은 피해가 들어오는 디버프를 부여합니다."
+            img="inv_misc_head_dragon_01"
+            title="점화 포효"
+            desc="모든 대상에게 공격대 피해와 도트 디버프를 부여합니다. 계속해서 쌓이므로 힐에 한계가 있어 빠른 시간 안에 전투를 끝내야 합니다. 또한 추가로 이 능력을 사용하면 용암 웅덩이가 생성됩니다."
             />
             <AberrusInsertBox1
-            img="ability_evoker_azurestrike"
-            title="불안정한 분출"
-            desc="바닥입니다, 피하면 됩니다."
+            img="spell_nature_earthquake"
+            title="압도적인 발구르기"
+            desc="모든 대상에게 물리 피해와 넉백을 시킵니다. 흑마법사의 관문을 이용하면 무시할 수 있습니다."
             />
             <AberrusInsertBox1
-            img="spell_shadow_unstableaffliction_3_purple"
-            title="격렬한 분출"
-            desc="8초동안 1초마다 공격대 피해를 줍니다."
+            img="ability_mage_firestarter"
+            title="타오르는 숨결"
+            desc="전면 원뿔 브레스 입니다. 피하세요."
             />
             <AberrusInsertBox1
-            img="ability_evoker_deepbreath"
-            title="깊은 숨결"
-            desc="맵 가장자리로 뛰어가서 비행 브레스를 쏠 준비를 합니다. 시전중에 탱커를 바라보지만 쏠 방향은 고정되어 있습니다."
-            />
-            <AberrusInsertBox1
-            img="ability_evoker_temporalanomaly"
-            title="시간 변칙"
-            desc="리온투스를 향해 노란색 구슬이 날아옵니다."
-            />
-            <AberrusInsertBox1
-            img="ability_evoker_disintegrate"
-            title="파열"
-            desc="무작위 대상에게 3초동안 1초마다 피해를 주면서 디버프를 부여합니다."
+            img="spell_fire_burnout"
+            title="소각하는 아귀"
+            desc="탱커를 3번 연속으로 때립니다. 한번에 3중첩이 생깁니다. 바로 도발하면 됩니다. "
             />
         </div>
     )

@@ -1,39 +1,39 @@
 import React from "react"
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
-
+import { TitleBar } from "../../Layout"
 import "./Aberrus.css"
 
 import {
-    publicData,
-    TitleBar,
     AberrusNav,
-    AberrusBossTitle,
+    AberrusTitle,
     AberrusDifficulty,
     AberrusBar,
-    NextBoss,
-    Mechanic,
-    MechanicSub,
+    AberrusNext,
+    AberrusInsertBox0,
+    AberrusInsertBox1,
+    AberrusInsertBox2,
+    AberrusInsertBoxModulerModel,
+    AberrusInsertBoxModulerAbility,
 } from "./AberrusLayout"
 
-export default function Experiments() {
+export default function Zaqali() {
     return (        
         <div className="content">
-            <TitleBar/>
+            <TitleBar title="월드 오브 워크래프트 10.1 - 어둠의 도가니 아베루스"/>
             <div className="aberrus">                
                 <AberrusNav number="4"/>                
-                <AberrusBossTitle
+                <AberrusTitle
                 name="자칼리의 습격"
                 number="4"/>
                 <AberrusDifficulty/>
-                <AberrusBar name="공략 개요"/>
-                <AberrusBarInsertIntro/>                
                 <AberrusBar name="사전 준비"/>
                 <AberrusBarInsertSetup/>                
+                <AberrusBar name="공략 개요"/>
+                <AberrusBarInsertIntro/>                
                 <AberrusBar name="던전 도감"/>
                 <AberrusBarInsertMechanic/>                
                 <AberrusBar name="공략 진행"/>
                 <AberrusBarInsertStrategy/>                
-                <NextBoss
+                <AberrusNext
                 next="다음 보스"
                 name="장로 라소크"
                 number="5"
@@ -43,38 +43,29 @@ export default function Experiments() {
     )
 }
 
-function AberrusBarInsertIntro() {
+//
+
+function AberrusBarInsertSetup() {
     return (
         <div className="aberrusBarInsert">
-            <div className="intro">
-                <p>전투 대상: 다수 대상, 마지막 페이즈는 보스와 단일 전투</p>
-                <p>블러드 : 마지막 페이즈</p>
-                <p>많은 종류의 적이 나옵니다. 각 적이 어떤 스킬을 사용하는지 확인하고 대처하면 어렵지 않습니다.</p>
-            </div>
+            <AberrusInsertBox0
+            title="인원 구성 : "
+            desc="특이사항 없음, 일반적인 구성"
+            />
         </div>
     )
 }
-
-function AberrusBarInsertSetup() {
-    const count = ["2", "4 / 6", "14+ / 22+"]
+function AberrusBarInsertIntro() {
     return (
         <div className="aberrusBarInsert">
-
-            <div className="setUp">
-                <div className="squad d-flex ac-c">
-                    <img className="img-30 mr-1" src={publicData.tankerIcon} alt=""/>
-                    <div className="count mr-1">{count[0]}</div>
-                    <img className="img-30 mr-1" src={publicData.healerIcon} alt=""/>
-                    <div className="count mr-1">{count[1]}</div>
-                    <img className="img-30 mr-1" src={publicData.dealerIcon} alt=""/>
-                    <div className="count">{count[2]}</div>
-                </div>
-            </div>
-
-            {/* <div className="textBarInsertInsert">
-                <p className="mb-0">추가 사항</p>
-            </div> */}
-
+            <AberrusInsertBox0
+            title="전투 대상 : "
+            desc="지속적인 다수 대상, 2페이즈는 단일 전투"
+            />
+            <AberrusInsertBox0
+            title="피의 욕망 : "
+            desc="전투 시작 혹은 2페이즈"
+            />
         </div>
     )
 }
@@ -82,32 +73,116 @@ function AberrusBarInsertSetup() {
 function AberrusBarInsertMechanic() {
     return (
         <div className="aberrusBarInsert">
-
-            <MechanicSub name="환경"/>
-            <Mechanic
-            img ="https://wow.zamimg.com/images/wow/icons/large/spell_mage_supernova_nightborne.jpg"
-            name="방벽 반발 작용"
-            p1  ="쫄이 맵 중앙의 문에 도착하면 전멸급의 공격대 피해를 받습니다."
-            p2  ="탱커가 자칼리 벽등반자 어그로를 획득하지 않으면 문으로 달려가므로 주의하세요."
+            <AberrusInsertBox1
+            img=""
+            title="1단계"
+            dsec=""
             />
-            <Mechanic
-            img ="https://wow.zamimg.com/images/wow/icons/large/ability_rogue_cannonballbarrage.jpg"
-            name="석궁 발사"
-            p1  ="전투 내내 12미터 연한 갈색 소용돌이 바닥이 생깁니다. 이동해서 피하세요."
+            <div className="aberrusBarInsertGridDouble">
+                <AberrusInsertBox2
+                img="spell_mage_supernova_nightborne"
+                title="방벽 반발 작용"
+                desc="쫄이 맵 중앙의 문에 도착하면 전멸급의 공격대 피해를 받습니다."
+                />
+                <AberrusInsertBox2
+                img="ability_rogue_cannonballbarrage"
+                title="석궁 발사"
+                desc="전투 내내 12미터 연한 갈색 소용돌이 바닥이 생깁니다. 이동해서 피하세요."
+                />
+                <div className="aberrusInsertModuler">
+                    <AberrusInsertBoxModulerModel
+                    model="https://www.method.gg/images/raidrace/bosses/aberrus-the-shadowed-crucible/assaultofthezaqali.png"
+                    name="전쟁군주 카그니"
+                    />
+                    <AberrusInsertBoxModulerAbility
+                    img="ability_heroicleap"
+                    name="파괴의 도약"
+                    desc="카그니의 기력이 가득 차면 반대쪽 단상으로 이동합니다. 착지하는 곳에 12미터 범위 피해와 넉백이 있으니 조심하세요."
+                    />
+                    <AberrusInsertBoxModulerAbility
+                    img="inv_10_blacksmithing_consumable_repairhammer_color1"
+                    name="무거운 곤봉"
+                    desc="탱커 쪽으로 전방 원뿔 공격을 합니다. 탱커는 45초동안 받는 피해가 15% 증가합니다."
+                    />                
+                </div>
+                <div className="aberrusInsertModuler">
+                    <AberrusInsertBoxModulerModel
+                    model="https://www.method.gg/images/raidrace/bosses/aberrus-the-shadowed-crucible/assaultofthezaqali.png"
+                    name="용암 비술사"
+                    />
+                    <AberrusInsertBoxModulerAbility
+                    img="inv_misc_orb_05"
+                    name="용암 보호막"
+                    desc="계속해서 점점 강해지는 공격대 피해를 주므로, 빠르게 피해를 주어 용암 보호막을 벗겨내야 합니다."
+                    />
+                    <AberrusInsertBoxModulerAbility
+                    img="ability_ironmaidens_rapidfire"
+                    name="용암 분출"
+                    desc="15초동안 3초마다 피해를 받는 디버프를 받습니다."
+                    />                
+                    <AberrusInsertBoxModulerAbility
+                    img="spell_shaman_lavaburst"
+                    name="용암 화살"
+                    desc="비술사의 용암 보호막을 제거하고 나면 시전하는 스킬입니다. 차단해야 합니다."
+                    />                
+                </div>
+                <div className="aberrusInsertModuler">
+                    <AberrusInsertBoxModulerModel
+                    model="https://www.method.gg/images/raidrace/bosses/aberrus-the-shadowed-crucible/assaultofthezaqali.png"
+                    name="화염결속 수렵꾼"
+                    />
+                    <AberrusInsertBoxModulerAbility
+                    img="inv_spear_03"
+                    name="이글거리는 창"
+                    desc="무작위 대상에게 창을 던져 8미터 범위 내 피해를 줍니다."
+                    />           
+                </div>
+                <div className="aberrusInsertModuler">
+                    <AberrusInsertBoxModulerModel
+                    model="https://www.method.gg/images/raidrace/bosses/aberrus-the-shadowed-crucible/assaultofthezaqali.png"
+                    name="흑요석 경비병"
+                    />
+                    <AberrusInsertBoxModulerAbility
+                    img="ability_warlock_fireandbrimstone"
+                    name="작열하는 포효"
+                    desc="25미터 내 대상에게 1.5초동안 0.5초마다 화염 피해를 줍니다."
+                    />           
+                    <AberrusInsertBoxModulerAbility
+                    img="ability_paladin_barrieroffaith"
+                    name="화산 보호막"
+                    desc="흑요석 경비병이 무작위 대상에게 용암 광선을 발사해 경로 모든 대상에게 피해를 줍니다."
+                    />           
+                </div>
+                <div className="aberrusInsertModuler">
+                    <AberrusInsertBoxModulerModel
+                    model="https://www.method.gg/images/raidrace/bosses/aberrus-the-shadowed-crucible/assaultofthezaqali.png"
+                    name="자칼리 벽등반자"
+                    />
+                    <AberrusInsertBoxModulerAbility
+                    desc="자칼리 벽등반자는 사용하는 스킬은 없고 등장 이후 문을 향해 달려갑니다."
+                    />               
+                </div>
+            </div>
+            <AberrusInsertBox1
+            img=""
+            title="2단계"
+            dsec=""
             />
-            <MechanicSub name="전쟁군주 카그니"/>
-            <Mechanic
-            img ="https://wow.zamimg.com/images/wow/icons/large/spell_mage_supernova_nightborne.jpg"
-            name="방벽 반발 작용"
-            p1  ="쫄이 맵 중앙의 문에 도착하면 전멸급의 공격대 피해를 받습니다."
-            p2  ="탱커가 자칼리 벽등반자 어그로를 획득하지 않으면 문으로 달려가므로 주의하세요."
+            <AberrusInsertBox1
+            img="spell_nature_earthquake"
+            title="재앙적인 격돌"
+            desc="기력이 100이 되면 문을 향해 충격파를 시전합니다. 맞으면 활력 약화 디버프가 생기는데, 다음 재앙적인 격돌로 받는 피해가 200% 증가합니다."
             />
-            <Mechanic
-            img ="https://wow.zamimg.com/images/wow/icons/large/ability_rogue_cannonballbarrage.jpg"
-            name="석궁 발사"
-            p1  ="전투 내내 12미터 연한 갈색 소용돌이 바닥이 생깁니다. 이동해서 피하세요."
+            <AberrusInsertBox1
+            img="spell_nature_unleashedrage"
+            title="필사적인 제물"
+            desc="카그니가 생명력의 100%를 회복합니다."
             />
-
+            <AberrusInsertBox1
+            img="inv_10_blacksmithing_consumable_repairhammer_color1"
+            title="무거운 곤봉"
+            desc="탱커 쪽으로 전방 원뿔 공격을 합니다. 탱커는 45초동안 받는 피해가 15% 증가합니다."
+            />
         </div>
     )
 }
@@ -116,22 +191,20 @@ function AberrusBarInsertStrategy() {
         <div className="aberrusBarInsert">
             
             <div className="strategy">
-                <p>크게 중요하진 않지만, 약산개 진형으로 시작합니다.</p>
-                <p>공략은 매우 간단하고, 직관적 입니다.</p>
-                <p>공격대원은 탱커와 부딪치지 않도록 합니다.</p>
-                <p>넬드리스</p>
-                <p>분쇄의 돌진, 경로에 서있지 않게 피하세요.</p>
-                <p>울부짖는 포효를 시전하면 멀리 빠집니다.</p>
+                <p>시작 전, 공격대를 각 플랫폼으로 이동할 두 그룹으로 나눕니다.</p>
+                <p>탱커와 힐러, 딜러를 절반씩 배치하면 됩니다.</p>
+                <p>카그니가 날아가고 나면, 각 플랫폼으로 이동합니다.</p>
+                <p>지속해서 광을 치는 전투가 진행됩니다.</p>
+                <p>중간중간 대처해야하는 스킬들에 대해 처리를 하면 됩니다.</p>
+                <p>비술사가 나타나면 보호막을 깨고, 차단을 보며, 해제를 합니다.</p>
 
-                <p>타드리온</p>
-                <p>블러드를 사용하고 빠르게 전투를 끝내야 합니다.</p>
+                <p>돌이 생성되면 담당 인원들이 획득해서 맵 가장자리에서 벽등반자를 제거합니다.</p>
+                <p>카그니는 기력이 100 될때마다 반대편으로 이동합니다. 반대편에 착지할 때 범위 공격과 바깥쪽으로 날아가는 투사체들을 피하면 됩니다.</p>
                 <p>
-                    불안정한 정수 관리가 핵심입니다. 자주 해제하면 쫄이 많아 딜 손실이 날 것이고, 그렇지 않으면 많은 공격대 피해를
-                    상쇄해야합니다. 약 7중첩에 해제하면 좋습니다.
+                    탱커는 빠르게 모든 쫄들의 어그로를 획득합니다.
                 </p>
                 <p>
-                    해제를 하면 쫄이 나오고, 이 쫄은 보스가 격렬한 분출을 시전하면 하나당 공격대 피해를 줍니다.
-                    따라서 격렬한 분출 타이밍을 잘 보고 해제 타이밍을 결정해야합니다.
+                    카그니의 생명력이 25%가 되면 문이 위치한 방 중앙으로 이동하며 최대 생명력의 10%를 회복하고 지속해서 공격대 피해를 주기 시작합니다.
                 </p>
                 <p>바닥은 단순히 이동해서 피하면 됩니다.</p>
 

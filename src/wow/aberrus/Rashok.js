@@ -10,17 +10,20 @@ import {
     AberrusNext,
     AberrusInsertBox0,
     AberrusInsertBox1,
+    AberrusInsertBox2,
+    AberrusInsertBoxModulerModel,
+    AberrusInsertBoxModulerAbility,
 } from "./AberrusLayout"
 
-export default function Experiments() {
+export default function Rashok() {
     return (        
         <div className="content">
             <TitleBar title="월드 오브 워크래프트 10.1 - 어둠의 도가니 아베루스"/>
             <div className="aberrus">                
-                <AberrusNav number="3"/>                
+                <AberrusNav number="5"/>                
                 <AberrusTitle
-                name="잊힌 실험체"
-                number="3"/>
+                name="장로 라소크"
+                number="5"/>
                 <AberrusDifficulty/>
                 <AberrusBar name="사전 준비"/>
                 <AberrusBarInsertSetup/>                
@@ -32,13 +35,15 @@ export default function Experiments() {
                 <AberrusBarInsertStrategy/>                
                 <AberrusNext
                 next="다음 보스"
-                name="자칼리의 습격"
-                number="4"
+                name="청지기 지스카른"
+                number="6"
                 />                
             </div>
         </div>
     )
 }
+
+//
 
 function AberrusBarInsertSetup() {
     return (
@@ -55,15 +60,15 @@ function AberrusBarInsertIntro() {
         <div className="aberrusBarInsert">
             <AberrusInsertBox0
             title="전투 대상 : "
-            desc="총 3마리의 보스, 각 단일 전투"
+            desc="1 대상"
             />
             <AberrusInsertBox0
             title="피의 욕망 : "
-            desc="타드리온 (2번째 보스)"
+            desc="전투 시작"
             />
             <AberrusInsertBox0
             title="유용함 : "
-            desc="사제의 대규모 무효화, 드워프의 석화, 수도사의 범의 욕망, 성기사의 자유의 축복, 기원사의 소생하는 불꽃"
+            desc="드루이드의 쇄도의 포효, 주술사의 바람 질주 토템, 보호막형 생존기, 죽음의 기사의 대마법 지대, 주술사의 정신 고리 토템, 악마사냥꾼의 어둠"
             />
         </div>
     )
@@ -73,54 +78,49 @@ function AberrusBarInsertMechanic() {
     return (
         <div className="aberrusBarInsert">
             <AberrusInsertBox1
-            img="ability_evoker_azurestrike"
-            title="마력 깃든 강타"
-            desc="평타마다 탱커에게 중첩되는 디버프를 부여합니다."
+            img="warrior_talent_icon_furyintheblood"
+            title="고대의 분노"
+            desc="라소크의 기력이 100이 되면 공격대가 전멸합니다."
             />
             <AberrusInsertBox1
-            img="ability_xavius_tormentingswipe"
-            title="분쇄의 돌진"
-            desc="여러 대상들에게 징표를 찍고 차례대로 돌진합니다."
+            img="spell_fire_fire"
+            title="녹아내린 분노"
+            desc="용암 웅덩이에서 15초마다 무작위 방향으로 분출됩니다."
             />
             <AberrusInsertBox1
-            img="inv_weapon_hand_30"
-            title="거대한 격돌"
-            desc="전방 충격파 입니다."
+            img="ability_shaman_lavalash"
+            title="시어링 슬램"
+            desc="대상자에게 잠시 후 점프 공격해 용암 웅덩이를 생성합니다. 밖에 깔면서 다른 용암 웅덩이와 겹치지 않게 합니다."
             />
             <AberrusInsertBox1
-            img="ability_evoker_oppressingroar"
-            title="우레와 같은 포효"
-            desc="시전하면 멀리 떨어져서 받는 피해를 감소시키세요."
+            img="inv_shadowflame_groundstate"
+            title="둠 플레임"
+            desc="각 한명씩 들어가서 막아야 하는 바닥이 생깁니다. 못 막은 바닥마다 공격대 피해를 입습니다."
             />
             <AberrusInsertBox1
-            img="ability_socererking_arcanemines"
-            title="불안정한 정수"
-            desc="무작위 대상에게 해제가 가능한 점점 많은 피해가 들어오는 디버프를 부여합니다."
+            img="inv_shadowflames_wave"
+            title="암흑불길 블래스트"
+            desc="광범위 전방 부채꼴 공격입니다. 피하세요."
             />
             <AberrusInsertBox1
-            img="ability_evoker_azurestrike"
-            title="불안정한 분출"
-            desc="바닥입니다, 피하면 됩니다."
+            img="inv_shadowflame_missile"
+            title="차지 스매시"
+            desc="모든 공격대원은 바닥 안에서 맞아야 합니다. 바닥 밖에 있는 공격대원은 큰 피해를 입습니다."
             />
             <AberrusInsertBox1
-            img="spell_shadow_unstableaffliction_3_purple"
-            title="격렬한 분출"
-            desc="8초동안 1초마다 공격대 피해를 줍니다."
+            img="inv_polearm_2h_dragonraid_d_02"
+            title="화산 콤보"
+            desc="라소크가 2연속 공격을 합니다. 한번씩 맞을 수 있도록 탱커끼리 도발합니다."
             />
             <AberrusInsertBox1
-            img="ability_evoker_deepbreath"
-            title="깊은 숨결"
-            desc="맵 가장자리로 뛰어가서 비행 브레스를 쏠 준비를 합니다. 시전중에 탱커를 바라보지만 쏠 방향은 고정되어 있습니다."
+            img="spell_shadow_lifedrain02_purple"
+            title="사이펀 에너지"
+            desc="라소크를 맵 중앙에 위치시키면, 기력 0이 될 때까지 1.5초마다 공격대 피해를 줍니다. 동시에 바닥을 피하면서 뭉쳐서 힐을 받아야 합니다."
             />
             <AberrusInsertBox1
-            img="ability_evoker_temporalanomaly"
-            title="시간 변칙"
-            desc="리온투스를 향해 노란색 구슬이 날아옵니다."
-            />
-            <AberrusInsertBox1
-            img="ability_evoker_disintegrate"
-            title="파열"
-            desc="무작위 대상에게 3초동안 1초마다 피해를 주면서 디버프를 부여합니다."
+            img="spell_winston_rage"
+            title="불굴의 분노"
+            desc="사이펀 에너지가 종료되면 공격대 피해와 넉백을 입습니다."
             />
         </div>
     )

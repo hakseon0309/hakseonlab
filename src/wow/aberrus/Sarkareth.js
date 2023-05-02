@@ -12,15 +12,15 @@ import {
     AberrusInsertBox1,
 } from "./AberrusLayout"
 
-export default function Experiments() {
+export default function Rashok() {
     return (        
         <div className="content">
             <TitleBar title="월드 오브 워크래프트 10.1 - 어둠의 도가니 아베루스"/>
             <div className="aberrus">                
-                <AberrusNav number="3"/>                
+                <AberrusNav number="9"/>                
                 <AberrusTitle
-                name="잊힌 실험체"
-                number="3"/>
+                name="비늘사령관 사카레스"
+                number="9"/>
                 <AberrusDifficulty/>
                 <AberrusBar name="사전 준비"/>
                 <AberrusBarInsertSetup/>                
@@ -31,14 +31,15 @@ export default function Experiments() {
                 <AberrusBar name="공략 진행"/>
                 <AberrusBarInsertStrategy/>                
                 <AberrusNext
-                next="다음 보스"
-                name="자칼리의 습격"
-                number="4"
-                />                
+                next="다음 던전"
+                name="v10.2 ..."
+                number=""/>  
             </div>
         </div>
     )
 }
+
+//
 
 function AberrusBarInsertSetup() {
     return (
@@ -55,73 +56,19 @@ function AberrusBarInsertIntro() {
         <div className="aberrusBarInsert">
             <AberrusInsertBox0
             title="전투 대상 : "
-            desc="총 3마리의 보스, 각 단일 전투"
+            desc="1 대상"
             />
             <AberrusInsertBox0
             title="피의 욕망 : "
-            desc="타드리온 (2번째 보스)"
-            />
-            <AberrusInsertBox0
-            title="유용함 : "
-            desc="사제의 대규모 무효화, 드워프의 석화, 수도사의 범의 욕망, 성기사의 자유의 축복, 기원사의 소생하는 불꽃"
+            desc="전투 시작"
             />
         </div>
     )
 }
-
 function AberrusBarInsertMechanic() {
     return (
         <div className="aberrusBarInsert">
-            <AberrusInsertBox1
-            img="ability_evoker_azurestrike"
-            title="마력 깃든 강타"
-            desc="평타마다 탱커에게 중첩되는 디버프를 부여합니다."
-            />
-            <AberrusInsertBox1
-            img="ability_xavius_tormentingswipe"
-            title="분쇄의 돌진"
-            desc="여러 대상들에게 징표를 찍고 차례대로 돌진합니다."
-            />
-            <AberrusInsertBox1
-            img="inv_weapon_hand_30"
-            title="거대한 격돌"
-            desc="전방 충격파 입니다."
-            />
-            <AberrusInsertBox1
-            img="ability_evoker_oppressingroar"
-            title="우레와 같은 포효"
-            desc="시전하면 멀리 떨어져서 받는 피해를 감소시키세요."
-            />
-            <AberrusInsertBox1
-            img="ability_socererking_arcanemines"
-            title="불안정한 정수"
-            desc="무작위 대상에게 해제가 가능한 점점 많은 피해가 들어오는 디버프를 부여합니다."
-            />
-            <AberrusInsertBox1
-            img="ability_evoker_azurestrike"
-            title="불안정한 분출"
-            desc="바닥입니다, 피하면 됩니다."
-            />
-            <AberrusInsertBox1
-            img="spell_shadow_unstableaffliction_3_purple"
-            title="격렬한 분출"
-            desc="8초동안 1초마다 공격대 피해를 줍니다."
-            />
-            <AberrusInsertBox1
-            img="ability_evoker_deepbreath"
-            title="깊은 숨결"
-            desc="맵 가장자리로 뛰어가서 비행 브레스를 쏠 준비를 합니다. 시전중에 탱커를 바라보지만 쏠 방향은 고정되어 있습니다."
-            />
-            <AberrusInsertBox1
-            img="ability_evoker_temporalanomaly"
-            title="시간 변칙"
-            desc="리온투스를 향해 노란색 구슬이 날아옵니다."
-            />
-            <AberrusInsertBox1
-            img="ability_evoker_disintegrate"
-            title="파열"
-            desc="무작위 대상에게 3초동안 1초마다 피해를 주면서 디버프를 부여합니다."
-            />
+
         </div>
     )
 }

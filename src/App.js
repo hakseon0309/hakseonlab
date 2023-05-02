@@ -1,6 +1,3 @@
-import { useState } from "react";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-
 import {
   Header,
   Aside,
@@ -13,7 +10,7 @@ import "./App.css"
 export default function App() {
   return (
     <div className="App">
-      <Header/>
+      <Header text="WLB 10.1"/>
       <div className="container">
         <Aside/>
         <Main/>

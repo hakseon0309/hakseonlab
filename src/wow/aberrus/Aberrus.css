@@ -1,177 +1,224 @@
-@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Dongle:wght@700&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
-
-/* -------------------------------------------------- */
-
-.aberrus {
-    margin: 10px;
-    display: flex;
-    flex-direction: column;
-    border: 3px solid black;
-}
-.aberrus p {
-    margin-top: 0px;
-}
-/* -------------------------------------------------- */
-
 .aberrusNav {
-    background-color: var(--hc-color-aberrus-bg-2);
-    height: 50px;
-    padding: 10px;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-}
+    background-color    : var(--hc-color-aberrus-bg-2);
 
+    height              : 50px;
+    padding             : 10px;
+
+    display             : flex;
+    align-items         : center;
+}
 .aberrusNav .bossIcon {
-    width: 46px;
-    height: 46px;
-    margin-right: 10px;
-    border-radius: 50%;
-    border: 2px solid var(--hc-color-point-1);
+    border              : 2px solid var(--hc-color-point-1);
+    border-radius       : 50%;
+
+    width               : 46px;
+    height              : 46px;
+
+    margin-right        : 10px;
 }
-
 /* -------------------------------------------------- */
+.aberrusTitle {
+    background-color    : var(--hc-color-aberrus-bg-1);
 
-.aberrusBossTitle {
-    background-color: var(--hc-color-aberrus-bg-1);
-    height: 150px;
-    padding-left: 20px;
-    display: grid;
+    height              : 150px;
+    
+    padding-left        : 20px;
+
+    display             : grid;
     grid-template-columns: 1fr 1fr;
 }
-
-.aberrusBossTitleText {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.aberrusTitleText {
+    display             : flex;
+    flex-direction      : column;
+    justify-content     : center;
 }
+.aberrusTitleText .dungeon {
+    color               : var(--hc-color-point-1);
 
-.aberrusBossTitleText .dungeon {
-    color: var(--hc-color-point-1);
-    font-size: 1rem;
+    font-size           : 1rem;
 }
-
-.aberrusBossTitleText .name {
-    font-size: 2.5rem;
-    font-family: 'Black Han Sans', sans-serif;
+.aberrusTitleText .name {
+    font-family         : var(--hc-font-strong);
+    font-size           : 2.5rem;
 }
+.aberrusTitle .img {
+    width               : 200px;
 
-.aberrusBossTitle .img {
-    width: 200px;
-    display: flex;
-    align-items: flex-end;
-    margin-left: auto;
+    display             : flex;
+    align-items         : flex-end;
+    margin-left         : auto;
 }
-
 /* -------------------------------------------------- */
-
 .aberrusDifficulty {
-    background-color: var(--hc-color-aberrus-bg-2);
-    height: 50px;
-    display: grid;
+    background-color    : var(--hc-color-aberrus-bg-2);
+
+    height              : 50px;
+
+    display             : grid;
     grid-template-columns: 1fr 1fr;
 }
-
 .aberrusDifficultyText {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
+    font-size           : 1.2rem;
+
+    display             : flex;
+    justify-content     : center;
+    align-items         : center;
 }
-
 /* -------------------------------------------------- */
-
 .aberrusBar {
-    background-color: var(--hc-color-aberrus-bg-1);
-    height: 50px;
-    padding-left: 20px;
-    display: flex;
-    align-items: center;
-    font-family: 'Black Han Sans', sans-serif;
-    font-size: 1.4rem;
+    background-color    : var(--hc-color-aberrus-bg-1);
+
+    height              : 50px;
+    padding             : 0px 20px 0px 20px;
+
+    display             : flex;
+    align-items         : center;
+
+    font-family         : 'Black Han Sans', sans-serif;
+    font-size           : 1.4rem;
 }
-
 /* -------------------------------------------------- */
-
 .aberrusBarInsert {
     background-color: var(--hc-color-aberrus-bg-2);
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+.aberrusBarInsertGridDouble {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    gap: 20px;
 }
 
 /* -------------------------------------------------- */
-
-.mechanic {
-    margin-bottom: 20px;
-}
-
-.mechanicTitle {
+.aberrusInsertBox0 {
     background-color: var(--hc-color-aberrus-bg-1);
-    border-bottom: 1px solid black;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-}
+    box-shadow: 0px 0px 5px black;
 
-.mechanicTitle .img {
-    width: 50px;
-    border: 3px solid #5b5b5b;
-    border-radius: 10px;
-    margin-right: 10px;
-}
-
-.mechanicTitle .name {
-
-}
-
-.mechanicDescription {
-    background-color: var(--hc-color-aberrus-bg-1);
     padding: 20px;
-    padding-top: 10px;
-}
 
-.MechanicSub {
-    background-color: var(--hc-color-aberrus-bg-2);
-    height: 30px;
-    padding: 10px;
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    /* gap: 20px; */
 }
-
-.MechanicSubIcon {
-    border: 2.5px solid #5b5b5b;
-    width: 30px;
-    border-radius: 7px;
-    margin-right: 10px;
+.aberrusInsertBox0Title {
+    width: 100px;
 }
+.aberrusInsertBox0TitleText {
 
+}
+.aberrusInsertBox0Description {
+    
+}
+.aberrusInsertBox0DescriptionText {
+
+}
 /* -------------------------------------------------- */
-
-.textBarInsertPhase {
+.aberrusInsertBox1 {
     background-color: var(--hc-color-aberrus-bg-1);
-    width: 150px;
-    height: 30px;
-    padding: 10px;
-    display: flex;
+    box-shadow: 0px 0px 5px black;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 3fr;
     align-items: center;
-    margin-bottom: 10px;
+}
+.aberrusInsertBox1Img {
+    border: 3px solid var(--hc-color-aberrus-border-1);
+    border-radius: 25%;
+    width: 50px;
+}
+.aberrusInsertBox1Title {
+    width: 100px;
+}
+.aberrusInsertBox1TitleText {
+
+}
+.aberrusInsertBox1Description {
+    
+}
+.aberrusInsertBox1DescriptionText {
+
+}
+/* -------------------------------------------------- */
+.aberrusInsertBox2 {
+    background-color: var(--hc-color-aberrus-bg-1);
+    box-shadow: 0px 0px 5px black;
+    padding: 20px;
+    display: grid;
+    grid-template-areas:
+    "img         title"
+    "description description";
+    align-items: center;
+    justify-content: center;
+    row-gap: 20px;
+}
+.aberrusInsertBox2Img {
+    border: 3px solid var(--hc-color-aberrus-border-1);
+    border-radius: 25%;
+    width: 50px;
+    grid-area: img;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+.aberrusInsertBox2Title {
+    grid-area: title;
+    width: 100%;
+}
+.aberrusInsertBox2TitleText {
+    width: 100%;
+}
+.aberrusInsertBox2Description {
+    grid-area: description;
+}
+.aberrusInsertBox2DescriptionText {
+
+}
+/* -------------------------------------------------- */
+.aberrusInsertModuler {
+    background-color: var(--hc-color-aberrus-bg-1);
+    box-shadow: 0px 0px 5px black;
+    display: flex;
+    flex-direction: column;
+}
+.aberrusInsertBoxModel {
+    margin: 0 auto;
+}
+.aberrusInsertBoxModel img {
+    width: 200px;
+    margin: 0 auto;
+}
+.aberrusInsertBoxModelName {
+    text-align: center;
+}
+.aberrusInsertBoxModulerAbility {
+    display: grid;
+    grid-template-areas: 
+    "img name"
+    "description description";
+    row-gap: 20px;
+    padding: 20px;
+}
+.aberrusInsertBoxModulerAbilityImg {
+    grid-area: img;
+    margin: 0 auto;
+    width: 50px;
+    border-radius: 10%;
+    border: 3px solid var(--hc-color-aberrus-border-1);
+}
+.aberrusInsertBoxModulerAbilityName {
+    grid-area: name;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.aberrusInsertBoxModulerAbilityDescription {
+    grid-area: description;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.aberrusStrategyText1 {
+    font-size: 1.5rem;
+}
 
 
 /* -------------------------------------------------- */

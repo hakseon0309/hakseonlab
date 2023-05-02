@@ -1,34 +1,30 @@
 import React from "react"
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
-
-import "./Aberrus.css"
-
+import { TitleBar } from "../../Layout"
 import {
     publicData,
-    TitleBar,
     AberrusNav,
-    AberrusBossTitle,
+    AberrusTitle,
     AberrusDifficulty,
     AberrusBar,
-    NextBoss,
+    AberrusNext,
     Mechanic,
     MechanicSub,
 } from "./AberrusLayout"
-
 import Roster from "./Roster"
+import "./Aberrus.css"
 
 export default function Aberrus() {
     return (
-        <div className="content">
-            <TitleBar/>
-            <div className="aberrus">
+        <div>
+            <TitleBar title="월드 오브 워크래프트 10.1 - 어둠의 도가니 아베루스"/>
+            <div className="content">
                 <AberrusNav number={0}/>
-                <AberrusBossTitle
+                <AberrusTitle
                 name={"WOW LIFE BALANCE"}
                 />                
                 <AberrusBar name="인원 구성"/>
                 <AberrusBarInsertIntro/>
-                <NextBoss
+                <AberrusNext
                 next="다음 던전"
                 name="v 10.2"
                 />

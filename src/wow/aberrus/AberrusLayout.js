@@ -1,12 +1,6 @@
 import React from "react"
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
 
-export const publicData = {
-    tankerIcon      : "https://www.method.gg/images/icons/role/tank-icon.png",
-    healerIcon      : "https://www.method.gg/images/icons/role/healer-icon.png",
-    dealerIcon      : "https://www.method.gg/images/icons/role/dps-icon.png",
-}
-
 export const bossImgList = [
     "",
     "https://www.method.gg/images/raidrace/bosses/aberrus-the-shadowed-crucible/kazzarathehellforged.png",
@@ -17,14 +11,30 @@ export const bossImgList = [
     "https://www.method.gg/images/raidrace/bosses/aberrus-the-shadowed-crucible/thevigilantstewardzskarn.png",
     "https://www.method.gg/images/raidrace/bosses/aberrus-the-shadowed-crucible/magmorax.png",
     "https://www.method.gg/images/raidrace/bosses/aberrus-the-shadowed-crucible/echoofneltharion.png",
-    "",
+    "https://www.method.gg/images/raidrace/bosses/aberrus-the-shadowed-crucible/scalecommandersarkareth.png",
 ]
-
-export function TitleBar() {
+export function Tanker() {
     return (
-        <div className="title">[10.1] 어둠의 도가니, 아베루스</div>
+        <span>
+            <img src="https://www.method.gg/images/icons/role/tank-icon.png" alt=""/>
+        </span>
     )
 }
+export function Healer() {
+    return (
+        <span>
+            <img src="https://www.method.gg/images/icons/role/healer-icon.png" alt=""/>
+        </span>
+    )
+}
+export function Dealer() {
+    return (
+        <span>
+            <img src="https://www.method.gg/images/icons/role/dps-icon.png" alt=""/>
+        </span>
+    )
+}
+
 
 export function AberrusNav(props) {
     const bossIconList = [
@@ -40,8 +50,7 @@ export function AberrusNav(props) {
         "https://www.method.gg/images/guides/bosses/18-03-23-6-Scalecommander%20Sarkareth.jpg",
     ]
     const opacityList = [0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3]
-    const number = props.number
-    opacityList[number] = 1
+    opacityList[props.number] = 1
     return (
         <div className="aberrusNav">
             <Link to="/">           <img className="bossIcon" src={bossIconList[0]} alt="" style={{opacity: opacityList[0]}}/></Link>
@@ -57,19 +66,17 @@ export function AberrusNav(props) {
         </div>
     )
 }
-
-export function AberrusBossTitle(props) {
+export function AberrusTitle(props) {
     return (
-        <div className="aberrusBossTitle">
-            <div className="aberrusBossTitleText">
-                <div className="dungeon">어둠의 도가니, 아베루스</div>
+        <div className="aberrusTitle">
+            <div className="aberrusTitleText">
+                <div className="dungeon">어둠의 도가니 아베루스</div>
                 <div className="name">{props.name}</div>
             </div>
             <div className='img'><img src={bossImgList[props.number]} alt=""/></div>
         </div>
     )
 }
-
 export function AberrusDifficulty() {
     return (
         <div className="aberrusDifficulty">
@@ -78,17 +85,15 @@ export function AberrusDifficulty() {
         </div>
     )
 }
-
 export function AberrusBar(props) {
     return (
         <div className="aberrusBar">{props.name}</div>
     )
 }
-
-export function NextBoss(props) {
+export function AberrusNext(props) {
     return (
-        <div className="aberrusBossTitle">
-            <div className="aberrusBossTitleText">
+        <div className="aberrusTitle">
+            <div className="aberrusTitleText">
                 <div className="dungeon">{props.next}</div>
                 <div className="name">{props.name}</div>
             </div>
@@ -97,27 +102,60 @@ export function NextBoss(props) {
     )
 }
 
-export function Mechanic(props) {
+
+
+export function AberrusInsertBox0(props) {
     return (
-        <div className="mechanic">
-            <div className="mechanicTitle">
-                <img className="img" src={props.img}alt=""/>
-                <div className="name">{props.name}</div>
-                </div>
-                <div className="mechanicDescription">
-                <p>{props.p1}</p>
-                <p>{props.p2}</p>
-                <p>{props.p3}</p>
+        <div className="aberrusInsertBox0">
+            <div className="aberrusInsertBox0Title">
+                <div className="aberrusInsertBox0TitleText">{props.title}</div>
+            </div>
+            <div className="aberrusInsertBox0Description">
+                <div className="aberrusInsertBox0DescriptionText">{props.desc}</div>
             </div>
         </div>
     )
 }
-
-export function MechanicSub(props) {
+export function AberrusInsertBox1(props) {
     return (
-        <div className="MechanicSub">
-            <img className="MechanicSubIcon" src={props.img} alt=""/>
-            <div className="MechanicSubName">{props.name}</div>
+        <div className="aberrusInsertBox1">
+            <img className="aberrusInsertBox1Img" src={"https://wow.zamimg.com/images/wow/icons/large/"+props.img+".jpg"} alt=""/>
+            <div className="aberrusInsertBox1Title">
+                <div className="aberrusInsertBox1TitleText">{props.title}</div>
+            </div>
+            <div className="aberrusInsertBox1Description">
+                <div className="aberrusInsertBox1DescriptionText"><p>{props.desc}</p></div>
+            </div>
+        </div>
+    )
+}
+export function AberrusInsertBox2(props) {
+    return (
+        <div className="aberrusInsertBox2">
+            <img className="aberrusInsertBox2Img" src={"https://wow.zamimg.com/images/wow/icons/large/"+props.img+".jpg"} alt=""/>
+            <div className="aberrusInsertBox2Title">
+                <div className="aberrusInsertBox2TitleText">{props.title}</div>
+            </div>
+            <div className="aberrusInsertBox2Description">
+                <div className="aberrusInsertBox2DescriptionText"><p>{props.desc}</p></div>
+            </div>
+        </div>
+    )
+}
+export function AberrusInsertBoxModulerModel(props) {
+    return (
+        <div className="aberrusInsertBoxModel">
+            <img src={props.model} alt=""/>
+            <div className="aberrusInsertBoxModelName">{props.name}</div>
+        </div>
+    )
+}
+export function AberrusInsertBoxModulerAbility(props) {
+    return (
+        <div className="aberrusInsertBoxModulerAbility">
+            <img className="aberrusInsertBoxModulerAbilityImg" src={"https://wow.zamimg.com/images/wow/icons/large/"+props.img+".jpg"} alt=""/>
+            <div className="aberrusInsertBoxModulerAbilityName">{props.name}</div>
+            <div className="aberrusInsertBoxModulerAbilityDescription"><p>{props.desc}</p></div>
         </div>
     )
 }

@@ -12,15 +12,15 @@ import {
     AberrusInsertBox1,
 } from "./AberrusLayout"
 
-export default function Experiments() {
+export default function Rashok() {
     return (        
         <div className="content">
             <TitleBar title="월드 오브 워크래프트 10.1 - 어둠의 도가니 아베루스"/>
             <div className="aberrus">                
-                <AberrusNav number="3"/>                
+                <AberrusNav number="6"/>                
                 <AberrusTitle
-                name="잊힌 실험체"
-                number="3"/>
+                name="청지기 지스카른"
+                number="6"/>
                 <AberrusDifficulty/>
                 <AberrusBar name="사전 준비"/>
                 <AberrusBarInsertSetup/>                
@@ -32,13 +32,15 @@ export default function Experiments() {
                 <AberrusBarInsertStrategy/>                
                 <AberrusNext
                 next="다음 보스"
-                name="자칼리의 습격"
-                number="4"
+                name="마그모락스"
+                number="7"
                 />                
             </div>
         </div>
     )
 }
+
+//
 
 function AberrusBarInsertSetup() {
     return (
@@ -55,73 +57,58 @@ function AberrusBarInsertIntro() {
         <div className="aberrusBarInsert">
             <AberrusInsertBox0
             title="전투 대상 : "
-            desc="총 3마리의 보스, 각 단일 전투"
+            desc="1 대상 + 주기적으로 소환되는 쫄 3마리"
             />
             <AberrusInsertBox0
             title="피의 욕망 : "
-            desc="타드리온 (2번째 보스)"
+            desc="전투 시작"
             />
             <AberrusInsertBox0
             title="유용함 : "
-            desc="사제의 대규모 무효화, 드워프의 석화, 수도사의 범의 욕망, 성기사의 자유의 축복, 기원사의 소생하는 불꽃"
+            desc="드루이드의 쇄도의 포효, 주술사의 바람 질주 토템, 기원사의 되감기, 죽음의 기사의 죽음의 손길, 흑마법의 악마의 관문"
             />
         </div>
     )
 }
-
 function AberrusBarInsertMechanic() {
     return (
         <div className="aberrusBarInsert">
             <AberrusInsertBox1
-            img="ability_evoker_azurestrike"
-            title="마력 깃든 강타"
-            desc="평타마다 탱커에게 중첩되는 디버프를 부여합니다."
+            img="spell_fire_sealoffire"
+            title="용불꽃 덫"
+            desc="근처에 몇개의 덫을 활성화하고 경기장에서 무작위로 하나를 활성화 합니다."
             />
             <AberrusInsertBox1
-            img="ability_xavius_tormentingswipe"
-            title="분쇄의 돌진"
-            desc="여러 대상들에게 징표를 찍고 차례대로 돌진합니다."
+            img="achievement_dungeon_ulduarraid_irongolem_01"
+            title="골렘 소환"
+            desc="골렘 3마리가 소환되고, 덫 활성화를 시도합니다. 차단하거나 스턴, 밀치기 등의 군중제어를 사용해서 방해합니다. 골렘이 죽으면 클릭해서 덫 가까이에서 엑스트라 버튼으로 비활성화 해야합니다."
             />
             <AberrusInsertBox1
-            img="inv_weapon_hand_30"
-            title="거대한 격돌"
-            desc="전방 충격파 입니다."
+            img="spell_fire_ragnaros_molteninferno"
+            title="전술적 파괴"
+            desc="지스카른의 기력이 100이 되면 근처 용 조각상을 활성화합니다. 빠르게 이탈해야 합니다."
             />
             <AberrusInsertBox1
-            img="ability_evoker_oppressingroar"
-            title="우레와 같은 포효"
-            desc="시전하면 멀리 떨어져서 받는 피해를 감소시키세요."
+            img="inv_misc_bomb_02"
+            title="파편 폭탄"
+            desc="지스카른이 폭탄을 여러개 설치합니다. 30초 후 폭발하면 공격대에 전멸급 피해를 입힙니다. 오프 탱커나 무적클로 제거해야 합니다."
             />
             <AberrusInsertBox1
-            img="ability_socererking_arcanemines"
-            title="불안정한 정수"
-            desc="무작위 대상에게 해제가 가능한 점점 많은 피해가 들어오는 디버프를 부여합니다."
+            img="ability_mage_fierypayback"
+            title="불안정한 불씨"
+            desc="여러 대상에게 주변 범위 바닥 디버프를 부여합니다. 나가서 혼자 맞고 오면 됩니다."
             />
             <AberrusInsertBox1
-            img="ability_evoker_azurestrike"
-            title="불안정한 분출"
-            desc="바닥입니다, 피하면 됩니다."
+            img="ability_foundryraid_blastwave"
+            title="폭발파"
+            desc="모든 대상을 넉백시키고 도트 디버프를 부여합니다. 바닥이나 폭탄 쪽으로 밀려날 수 있기 때문에 주의해야 합니다."
             />
             <AberrusInsertBox1
-            img="spell_shadow_unstableaffliction_3_purple"
-            title="격렬한 분출"
-            desc="8초동안 1초마다 공격대 피해를 줍니다."
+            img="ability_warlock_backdraft"
+            title="불타는 발톱"
+            desc="탱커에게 20초 디버프를 부여합니다. 중첩이 높아지면 도발 인계합니다."
             />
-            <AberrusInsertBox1
-            img="ability_evoker_deepbreath"
-            title="깊은 숨결"
-            desc="맵 가장자리로 뛰어가서 비행 브레스를 쏠 준비를 합니다. 시전중에 탱커를 바라보지만 쏠 방향은 고정되어 있습니다."
-            />
-            <AberrusInsertBox1
-            img="ability_evoker_temporalanomaly"
-            title="시간 변칙"
-            desc="리온투스를 향해 노란색 구슬이 날아옵니다."
-            />
-            <AberrusInsertBox1
-            img="ability_evoker_disintegrate"
-            title="파열"
-            desc="무작위 대상에게 3초동안 1초마다 피해를 주면서 디버프를 부여합니다."
-            />
+
         </div>
     )
 }

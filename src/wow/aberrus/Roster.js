@@ -3,29 +3,29 @@ import React from "react"
 import "./Roster.css"
 
 export default function Roster() {
-    const row1  = [ 1  , "양조" , <CharacterLog class="양조" name="학선양"/>             , ]
-    const row2  = [ 2  , "보기" , <CharacterLog name="Diamondtits"/>        , ]
-    const row3  = [ 3  , "신사" , <CharacterLog name="요조링"/>             , ]
-    const row4  = [ 4  , "신기" , <CharacterLog name="공격대체력관리사"/>    , ]
-    const row5  = [ 5  , "복술" , <CharacterLog name="연치난사"/>            , ]
-    const row6  = [ 6  , ""     , ""                                        , ]
-    const row7  = [ 7  , "전딜" , <CharacterLog name="칩턴이"/>              , ]
-    const row8  = [ 8  , "악딜" , <CharacterLog name="Zinzu"/>              , ]
-    const row9  = [ 9  , "도적" , <CharacterLog name="Amsso"/>              , ]
-    const row10 = [ 10 , ""     , ""                                        , ]
-    const row11 = [ 11 , "법사" , <CharacterLog name="Lastwaltz"/>          , ]
-    const row12 = [ 12 , "법사" , <CharacterLog name="딸기맛향기"/>          , ]
-    const row13 = [ 13 , "흑마" , <CharacterLog name="꼼흑"/>               , ]
-    const row14 = [ 14 , "흑마" , <CharacterLog name="안득환"/>             , ]
-    const row15 = [ 15 , "냥꾼" , <CharacterLog name="할수있따"/>           , ]
-    const row16 = [ 16 , "냥꾼" , <CharacterLog name="아동센터"/>           , ]
-    const row17 = [ 17 , "조드" , <CharacterLog name="니달리뜨루"/>         , ]
-    const row18 = [ 18 , "정술" , <CharacterLog name="깊게박힌진동토템"/>   , ]
-    const row19 = [ 19 , "암사" , <CharacterLog name="메이드홍콩"/>         , ]
-    const row20 = [ 20 , "용딜" , <CharacterLog name="바다드래곤"/>         , ]
+    const row1  = [ 1  , "양조" , <CharacterLog class="양조" name="학선양"/>,]
+    const row2  = [ 2  , "보기" , <CharacterLog name="Diamondtits"/>,]
+    const row3  = [ 3  , "신사" , <CharacterLog name="요조링"/>,]
+    const row4  = [ 4  , "신기" , <CharacterLog name="공격대체력관리사"/>,]
+    const row5  = [ 5  , "복술" , <CharacterLog name="연치난사"/>,]
+    const row6  = [ 6  , "null" , <CharacterLog name=""/>,]
+    const row7  = [ 7  , "전딜" , <CharacterLog name="칩턴이"/>,]
+    const row8  = [ 8  , "악딜" , <CharacterLog name="Zinzu"/>,]
+    const row9  = [ 9  , "도적" , <CharacterLog name="Amsso"/>,]
+    const row10 = [ 10 , "null" , <CharacterLog name=""/>,]
+    const row11 = [ 11 , "법사" , <CharacterLog name="Lastwaltz"/>,]
+    const row12 = [ 12 , "법사" , <CharacterLog name="딸기맛향기"/>,]
+    const row13 = [ 13 , "흑마" , <CharacterLog name="꼼흑"/>,]
+    const row14 = [ 14 , "흑마" , <CharacterLog name="안득환"/>,]
+    const row15 = [ 15 , "냥꾼" , <CharacterLog name="할수있따"/>,]
+    const row16 = [ 16 , "냥꾼" , <CharacterLog name="아동센터"/>,]
+    const row17 = [ 17 , "조드" , <CharacterLog name="니달리뜨루"/>,]
+    const row18 = [ 18 , "정술" , <CharacterLog name="깊게박힌진동토템"/>,]
+    const row19 = [ 19 , "암사" , <CharacterLog name="메이드홍콩"/>,]
+    const row20 = [ 20 , "용딜" , <CharacterLog name="바다드래곤"/>,]
     return (
-        <table>
-            <tr>탱커</tr>
+        <table className="rosterTable">
+            <td className="rosterHeader" colSpan={3}>탱커</td>
             <tr>
                 <td>{row1[0]}</td>
                 <td>{row1[1]}</td>
@@ -50,7 +50,7 @@ export default function Roster() {
                 <td>{row2[8]}</td>
                 <td>{row2[9]}</td>
             </tr>
-            <tr className="healer">힐러</tr>
+            <td className="rosterHeader" colSpan={3}>힐러</td>
             <tr>
                 <td>{row3[0]}</td>
                 <td>{row3[1]}</td>
@@ -99,7 +99,7 @@ export default function Roster() {
                 <td>{row6[8]}</td>
                 <td>{row6[9]}</td>
             </tr>
-            <tr className="dealer">딜러</tr>
+            <td className="rosterHeader" colSpan={3}>딜러</td>
             <tr>
                 <td>{row7[0]}</td>
                 <td>{row7[1]}</td>

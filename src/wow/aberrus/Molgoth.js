@@ -1,39 +1,37 @@
 import React from "react"
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
-
+import { TitleBar } from "../../Layout"
 import "./Aberrus.css"
 
 import {
-    publicData,
-    TitleBar,
     AberrusNav,
-    AberrusBossTitle,
+    AberrusTitle,
     AberrusDifficulty,
     AberrusBar,
-    NextBoss,
-    Mechanic,
-    MechanicSub,
+    AberrusNext,
+    AberrusInsertBox0,
+    AberrusInsertBox1,
+    AberrusInsertBox2,
 } from "./AberrusLayout"
 
 export default function Molgoth() {
     return (        
         <div className="content">
-            <TitleBar/>
+            <TitleBar title="월드 오브 워크래프트 10.1 - 어둠의 도가니 아베루스"/>
             <div className="aberrus">                
                 <AberrusNav number="2"/>                
-                <AberrusBossTitle
+                <AberrusTitle
                 name="융합체의 방"
                 number="2"/>
                 <AberrusDifficulty/>
-                <AberrusBar name="공략 개요"/>
-                <AberrusBarInsertIntro/>                
                 <AberrusBar name="사전 준비"/>
                 <AberrusBarInsertSetup/>                
+                <AberrusBar name="공략 개요"/>
+                <AberrusBarInsertIntro/>                
                 <AberrusBar name="던전 도감"/>
                 <AberrusBarInsertMechanic/>                
                 <AberrusBar name="공략 진행"/>
                 <AberrusBarInsertStrategy/>                
-                <NextBoss
+                <AberrusNext
                 next="다음 보스"
                 name="잊힌 실험체"
                 number="3"
@@ -42,144 +40,114 @@ export default function Molgoth() {
         </div>
     )
 }
-
+function AberrusBarInsertSetup() {
+    return (
+        <div className="aberrusBarInsert">
+            <AberrusInsertBox0
+            title="인원 구성 : "
+            desc="추가 힐러가 필요할 수 있음"
+            />
+        </div>
+    )
+}
 function AberrusBarInsertIntro() {
     return (
         <div className="aberrusBarInsert">
-            <div className="intro">
-                <p>전투 대상: 2타겟, 50% 이후 단일</p>
-                <p>블러드: 2단계</p>
-                <p>1단계에서 두 보스가 25m 이내로 위치하지 않도록 합니다.</p>
-            </div>
+            <AberrusInsertBox0
+            title="전투 대상 : "
+            desc="1 페이즈 - 2 대상,     2페이즈 - 1 대상"
+            />
+            <AberrusInsertBox0
+            title="피의 욕망 : "
+            desc="전투 시작 혹은 2 페이즈"
+            />
+            <AberrusInsertBox0
+            title="유용함 : "
+            desc="드루이드의 쇄도의 포효, 주술사의 바람 질주 토템, 흑마법사의 악마의 관문"
+            />
         </div>
     )
 }
-
-function AberrusBarInsertSetup() {
-    const count = ["2", "4-5 / 6-7", "13+ / 21+"]
-    return (
-        <div className="aberrusBarInsert">
-
-            <div className="setUp">
-                <div className="squad d-flex ac-c">
-                    <img className="img-30 mr-1" src={publicData.tankerIcon} alt=""/>
-                    <div className="count mr-1">{count[0]}</div>
-                    <img className="img-30 mr-1" src={publicData.healerIcon} alt=""/>
-                    <div className="count mr-1">{count[1]}</div>
-                    <img className="img-30 mr-1" src={publicData.dealerIcon} alt=""/>
-                    <div className="count">{count[2]}</div>
-                </div>
-            </div>
-
-            {/* <div className="textBarInsertInsert">
-                <p className="mb-0">추가 사항</p>
-            </div> */}
-
-        </div>
-    )
-}
-
 function AberrusBarInsertMechanic() {
     return (
         <div className="aberrusBarInsert">
-            
-            <MechanicSub name="1단계: 그림자의 정수"/>
-            <Mechanic
-            img ="https://wow.zamimg.com/images/wow/icons/large/spell_shadow_deathsembrace.jpg"
-            name="타락의 어둠"
-            p1  ="50m 내 모든 대상에게 5초마다 타락의 어둠을 부여합니다."
-            p2  ="20초동안 5초마다 피해를 입고, 최대 생명력이 1% 감소합니다."
-            p3  ="이 효과는 다른 기술에 피해를 입어도 중첩됩니다."
+            <div className="aberrusBarInsertGridDouble">
+                <AberrusInsertBox2
+                img="spell_shadow_deathsembrace"
+                title="타락의 어둠"
+                desc="50m 내 모든 대상에게 5초마다 타락의 어둠을 부여합니다."
+                />
+                <AberrusInsertBox2
+                img="ability_warlock_fireandbrimstone"
+                title="타오르는 열기"
+                desc="50m 내 모든 대상에게 20초동안 5초마다 피해를 입는 디버프를 부여합니다."
+                />
+                <AberrusInsertBox2
+                img="inv_icon_shadowcouncilorb_purple"
+                title="응결되는 공허"
+                desc="무작위 대상 위치에 50m 내 모든 대상에게 큰 피해를 입히는 폭탄을 생성합니다."
+                />
+                <AberrusInsertBox2
+                img="spell_mage_meteor"
+                title="불타는 유성"
+                desc="여러 대상이 같이 맞아야하는 대형 바닥입니다."
+                />
+                <AberrusInsertBox2
+                img="spell_shadow_shadowfury"
+                title="암영의 폭발"
+                desc="무작위 여러 대상에게 6초 후 8m 바닥을 생성하는 디버프를 부여합니다."
+                />
+                <AberrusInsertBox2
+                img="ability_rhyolith_volcano"
+                title="타오르는 폭발"
+                desc="여러 바닥이 생성되고 모두 막아야 합니다."
+                />
+                <AberrusInsertBox2
+                img="spell_priest_shadoworbs"
+                title="어둠의 합일"
+                desc="다방면에서 그림자의 정수 쪽으로 향하는 구체를 생성합니다."
+                />
+                <AberrusInsertBox2
+                img="spell_shaman_lavasurge"
+                title="소용돌이치는 화염"
+                desc="무작위 대상에게 여러 갈래로 뻗어나가는 소용돌이를 발사합니다."
+                />
+                <AberrusInsertBox2
+                img="ability_ironmaidens_convulsiveshadows"
+                title="어둠의 쐐기"
+                desc="탱커에게 단일 피해를 입힙니다."
+                />
+                <AberrusInsertBox2
+                img="spell_fire_soulburn"
+                title="화염 베기"
+                desc="탱커에게 단일 피해를 입힙니다."
+                />
+            </div>
+            <AberrusInsertBox1
+            img="inv_shadowflame_debuff"
+            title="암흑불길 오염"
+            desc="모든 플레이어에게 10초마다 중첩되는 디버프를 부여합니다."
             />
-            <Mechanic
-            img ="https://wow.zamimg.com/images/wow/icons/large/inv_icon_shadowcouncilorb_purple.jpg"
-            name="응결되는 공허"
-            p1  ="무작위 대상 위치에 50m 내 모든 대상에게 큰 피해를 입히는 폭탄을 생성합니다."
-            p2  ="멀리 떨어질 수록 받는 피해가 감소합니다."
+            <AberrusInsertBox1
+            img="inv_shadowflame_nova"
+            title="암울한 겁화"
+            desc="5명 이상의 대상이 나눠 맞아야하는 대형 바닥을 생성합니다."
             />
-            <Mechanic
-            img ="https://wow.zamimg.com/images/wow/icons/large/spell_shadow_shadowfury.jpg"
-            name="암영의 폭발"
-            p1  ="무작위 여러 대상에게 6초 후 8m 바닥을 생성하는 디버프를 부여합니다."
-            p2  ="공격대 위치 바깥, 벽쪽에 유도하고 복귀합니다."
+            <AberrusInsertBox1
+            img="inv_shadowflame_groundstate"
+            title="맹렬한 황혼"
+            desc="모든 플레이어에게 10초마다 중첩되는 디버프를 부여합니다."
             />
-            <Mechanic
-            img ="https://wow.zamimg.com/images/wow/icons/large/spell_priest_shadoworbs.jpg"
-            name="어둠의 합일"
-            p1  ="다방면에서 그림자의 정수 쪽으로 향하는 구체를 생성합니다."
-            p2  ="이동해서 회피합니다."
+            <AberrusInsertBox1
+            img="inv_chaos_orb"
+            title="수렴 분출"
+            desc="모든 플레이어에게 10초마다 중첩되는 디버프를 부여합니다."
             />
-            <Mechanic
-            img ="https://wow.zamimg.com/images/wow/icons/large/ability_ironmaidens_convulsiveshadows.jpg"
-            name="어둠의 쐐기"
-            p1  ="탱커에게 단일 피해를 입힙니다."
-            p2  ="이 효과는 중첩됩니다, 면역 기술로 중첩을 초기화할 수 있습니다"
+            <AberrusInsertBox1
+            img="inv_shadowflame_buff"
+            title="쇠약의 약점"
+            desc="탱커에게 큰 물리 피해를 입히고, 암흑불길 폭발로 받는 피해를 200% 증가시킵니다."
             />
-            <MechanicSub name="1단계: 영원한 불길"/>
-            <Mechanic
-            img ="https://wow.zamimg.com/images/wow/icons/large/ability_warlock_fireandbrimstone.jpg"
-            name="타오르는 열"
-            p1  ="50m 내 모든 대상에게 20초동안 5초마다 피해를 입는 디버프를 부여합니다."
-            p2  ="이 효과는 다른 기술에 피해를 입어도 중첩됩니다."
-            />
-            <Mechanic
-            img ="https://wow.zamimg.com/images/wow/icons/large/spell_mage_meteor.jpg"
-            name="불타는 유성"
-            p1  ="여러 대상이 같이 맞아야하는 대형 바닥입니다."
-            p2  ="면역 기술로 혼자 맞을 수 있습니다."
-            />
-            <Mechanic
-            img ="https://wow.zamimg.com/images/wow/icons/large/ability_rhyolith_volcano.jpg"
-            name="타오르는 폭발"
-            p1  ="여러 바닥이 생성되고 모두 막아야 합니다."
-            p2  ="막지 못한 바닥당 공격대 피해를 입습니다."
-            />
-            <Mechanic
-            img ="https://wow.zamimg.com/images/wow/icons/large/spell_shaman_lavasurge.jpg"
-            name="소용돌이치는 화염"
-            p1  ="무작위 대상에게 여러 갈래로 뻗어나가는 소용돌이를 발사합니다."
-            p2  ="이동해서 회피합니다."
-            />
-            <Mechanic
-            img ="https://wow.zamimg.com/images/wow/icons/large/spell_fire_soulburn.jpg"
-            name="화염 베기"
-            p1  ="탱커에게 단일 피해를 입힙니다."
-            p2  ="이 효과는 중첩되며, 면역 기술로 중첩을 초기화할 수 있습니다."
-            />
-            <MechanicSub name="2단계: 완벽한 파괴"/>
-            <Mechanic
-            img ="https://wow.zamimg.com/images/wow/icons/large/inv_shadowflame_debuff.jpg"
-            name="암흑불길 오염"
-            p1  ="모든 플레이어에게 10초마다 중첩되는 디버프를 부여합니다."
-            p2  ="무한히 지속되며, 2초마다 피해를 입히고 최대 생명력을 1% 감소시킵니다."
-            p3  ="이 효과는 중첩됩니다."
-            />
-            <Mechanic
-            img ="https://wow.zamimg.com/images/wow/icons/large/inv_shadowflame_nova.jpg"
-            name="암울한 겁화"
-            p1  ="5명 이상의 대상이 나눠 맞아야하는 대형 바닥을 생성합니다."
-            p2  ="이후 멀리 떨어져야하는 폭발이 발생합니다."
-            />
-            <Mechanic
-            img ="https://wow.zamimg.com/images/wow/icons/large/inv_shadowflame_groundstate.jpg"
-            name="맹렬한 황혼"
-            p1  ="무작위 여러 대상에게 6초 후 분출되는 디버프를 부여합니다."
-            p2  ="분출되면 대상 위치에 바닥을 생성하고 바깥 쪽으로 소용돌이를 발사합니다."
-            p3  ="진형 밖에서 바닥을 깔고 복귀합니다."
-            />
-            <Mechanic
-            img ="https://wow.zamimg.com/images/wow/icons/large/inv_chaos_orb.jpg"
-            name="수렴 분출"
-            p1  ="막아야 하는 여러 바닥이 생성됩니다, 막지 못하면 공격대 피해를 받습니다."
-            p2  ="이후 바깥 쪽에서 바닥을 향해 소용돌이가 생성되므로 이동해서 회피합니다."
-            />
-            <Mechanic
-            img ="https://wow.zamimg.com/images/wow/icons/large/inv_shadowflame_buff.jpg"
-            name="쇠약의 약점"
-            p1  ="탱커에게 큰 물리 피해를 입히고, 암흑불길 폭발로 받는 피해를 200% 증가시킵니다"
-            p2  ="탱커는 1 중첩 교대합니다."
-            />
-
         </div>
     )
 }
