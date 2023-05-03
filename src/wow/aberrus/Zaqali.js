@@ -91,7 +91,6 @@ function AberrusBarInsertMechanic() {
                 />
                 <div className="aberrusInsertModuler">
                     <AberrusInsertBoxModulerModel
-                    model="https://www.method.gg/images/raidrace/bosses/aberrus-the-shadowed-crucible/assaultofthezaqali.png"
                     name="전쟁군주 카그니"
                     />
                     <AberrusInsertBoxModulerAbility
@@ -107,7 +106,6 @@ function AberrusBarInsertMechanic() {
                 </div>
                 <div className="aberrusInsertModuler">
                     <AberrusInsertBoxModulerModel
-                    model="https://www.method.gg/images/raidrace/bosses/aberrus-the-shadowed-crucible/assaultofthezaqali.png"
                     name="용암 비술사"
                     />
                     <AberrusInsertBoxModulerAbility
@@ -128,7 +126,6 @@ function AberrusBarInsertMechanic() {
                 </div>
                 <div className="aberrusInsertModuler">
                     <AberrusInsertBoxModulerModel
-                    model="https://www.method.gg/images/raidrace/bosses/aberrus-the-shadowed-crucible/assaultofthezaqali.png"
                     name="화염결속 수렵꾼"
                     />
                     <AberrusInsertBoxModulerAbility
@@ -139,7 +136,6 @@ function AberrusBarInsertMechanic() {
                 </div>
                 <div className="aberrusInsertModuler">
                     <AberrusInsertBoxModulerModel
-                    model="https://www.method.gg/images/raidrace/bosses/aberrus-the-shadowed-crucible/assaultofthezaqali.png"
                     name="흑요석 경비병"
                     />
                     <AberrusInsertBoxModulerAbility
@@ -155,11 +151,10 @@ function AberrusBarInsertMechanic() {
                 </div>
                 <div className="aberrusInsertModuler">
                     <AberrusInsertBoxModulerModel
-                    model="https://www.method.gg/images/raidrace/bosses/aberrus-the-shadowed-crucible/assaultofthezaqali.png"
                     name="자칼리 벽등반자"
                     />
                     <AberrusInsertBoxModulerAbility
-                    desc="자칼리 벽등반자는 사용하는 스킬은 없고 등장 이후 문을 향해 달려갑니다."
+                    desc="자칼리 벽등반자는 사용하는 스킬은 없고 등장 이후 문을 향해 달려갑니다. 어그로를 획득하면 됩니다."
                     />               
                 </div>
             </div>
@@ -189,40 +184,28 @@ function AberrusBarInsertMechanic() {
 function AberrusBarInsertStrategy() {
     return (
         <div className="aberrusBarInsert">
-            
-            <div className="strategy">
-                <p>시작 전, 공격대를 각 플랫폼으로 이동할 두 그룹으로 나눕니다.</p>
-                <p>탱커와 힐러, 딜러를 절반씩 배치하면 됩니다.</p>
-                <p>카그니가 날아가고 나면, 각 플랫폼으로 이동합니다.</p>
-                <p>지속해서 광을 치는 전투가 진행됩니다.</p>
-                <p>중간중간 대처해야하는 스킬들에 대해 처리를 하면 됩니다.</p>
-                <p>비술사가 나타나면 보호막을 깨고, 차단을 보며, 해제를 합니다.</p>
-
-                <p>돌이 생성되면 담당 인원들이 획득해서 맵 가장자리에서 벽등반자를 제거합니다.</p>
-                <p>카그니는 기력이 100 될때마다 반대편으로 이동합니다. 반대편에 착지할 때 범위 공격과 바깥쪽으로 날아가는 투사체들을 피하면 됩니다.</p>
-                <p>
-                    탱커는 빠르게 모든 쫄들의 어그로를 획득합니다.
-                </p>
-                <p>
-                    카그니의 생명력이 25%가 되면 문이 위치한 방 중앙으로 이동하며 최대 생명력의 10%를 회복하고 지속해서 공격대 피해를 주기 시작합니다.
-                </p>
-                <p>바닥은 단순히 이동해서 피하면 됩니다.</p>
-
-                <p>리온투스</p>
-
-                <p>
-                    리온투스와 전투중일 때도 불안정한 정수는 계속 존재합니다.
-                    한번에 모여서 해제하고 광역 피해로 제거합니다.
-                </p>
-
-                <p>노란색 공이 보스에 닿지 않게 전담조가 계속 튕겨내주세요.</p>
-                <p>파열 대상이 되면 진형에서 이탈합니다. 이동 속도가 감소했기 때문에, 깊은 숨결을 잘 피해야 합니다.</p>
-
-                <p>깊은 숨결은 맵을 세 분할로 나눠 랜덤한 위치로 두 번 사용합니다, 위치를 잘 보고 피하세요.</p>
-
-
-            </div>
-
+            <p>
+                공격대를 두 그룹으로 나눕니다. 전투 시작시 카그니를 일정시간 딜하다가 각 그룹은 단상으로 이동합니다.
+            </p>
+            <img src="https://www.method.gg/images/guides/uploads/assault-of-the-zaqali-group-map.jpg" alt=""/>
+            <p>
+                카그니가 있는 단상은 무거운 곤봉 스킬을 사용하고나면 돌이 떨어진 것을 확인할 수 있습니다.
+                돌을 클릭하면 위 사진에 나와있는 화살표 위치로 가면 엑스트라 버튼으로 올라오고 있는 벽등반자를 제거할 수 있습니다.
+            </p>
+            <p>
+                1 페이즈의 전투는 항상 같은 패턴입니다. 최우선적으로 용암 비술사의 용암 보호막을 제거하고, 흑요석 경비병을 그 다음 순위로 광을 칩니다.
+                탱커는 모든 쫄의 어그로를 빠르게 획득해서 용암 비술사에 붙입니다.
+                용암 비술사의 용암 화살을 차단해야합니다.
+            </p>
+            <p>
+                카그니의 생명력이 15%가 되면 2 페이즈가 시작됩니다.
+                전투가 끝날때까지 계속해서 공격대 피해가 들어옵니다.
+                타임어택형 전투가 시작되며 카그니의 전방 기술을 조심하세요.
+            </p>
+            <p>
+                카그니의 기력이 100이 될때마다 재앙적인 격돌을 사용하는데, 공격대원이 나눠맞을 수 있고, 나눠맞은 수만큼 기력이 감소합니다. 최소 10명이 좋습니다.
+                맞으면 다음 재앙적인 격돌로 받는 피해를 75% 증가시키기 때문에, 조를 나눠 맞아도 많이 맞을 수 없습니다. 빠르게 전투를 끝내야 합니다.
+            </p>
         </div>
     )
 }

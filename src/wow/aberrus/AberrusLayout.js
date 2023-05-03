@@ -53,7 +53,7 @@ export function AberrusNav(props) {
     opacityList[props.number] = 1
     return (
         <div className="aberrusNav">
-            <Link to="/">           <img className="bossIcon" src={bossIconList[0]} alt="" style={{opacity: opacityList[0]}}/></Link>
+            <Link to="/aberrus">    <img className="bossIcon" src={bossIconList[0]} alt="" style={{opacity: opacityList[0]}}/></Link>
             <Link to="/kazzara">    <img className="bossIcon" src={bossIconList[1]} alt="" style={{opacity: opacityList[1]}}/></Link>
             <Link to="/molgoth">    <img className="bossIcon" src={bossIconList[2]} alt="" style={{opacity: opacityList[2]}}/></Link>
             <Link to="/experiments"><img className="bossIcon" src={bossIconList[3]} alt="" style={{opacity: opacityList[3]}}/></Link>

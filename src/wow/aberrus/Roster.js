@@ -20,7 +20,7 @@ export default function Roster() {
     const row15 = [ 15 , "냥꾼" , <CharacterLog name="할수있따"/>,]
     const row16 = [ 16 , "냥꾼" , <CharacterLog name="아동센터"/>,]
     const row17 = [ 17 , "조드" , <CharacterLog name="니달리뜨루"/>,]
-    const row18 = [ 18 , "정술" , <CharacterLog name="깊게박힌진동토템"/>,]
+    const row18 = [ 18 , "" , <CharacterLog name=""/>,]
     const row19 = [ 19 , "암사" , <CharacterLog name="메이드홍콩"/>,]
     const row20 = [ 20 , "용딜" , <CharacterLog name="바다드래곤"/>,]
     return (

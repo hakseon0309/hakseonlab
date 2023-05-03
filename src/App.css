@@ -122,7 +122,6 @@ aside {
 }
 .profile {
     padding             : 10px;
-    margin-bottom       : 10px;
 }
 .profile .background {
     background-color    : #212121;
@@ -149,6 +148,33 @@ aside {
 
     font-size           : 0.75rem;
 }
+.category {
+    padding: 0px 10px 10px 10px;
+    margin-bottom: 10px;
+}
+.categoryBackground {
+    background-color    : #212121;
+    border-radius       : 10px;
+    
+    height              : 100px;
+    
+    display             : flex;
+    flex-direction: column;
+    /* align-items         : center; */
+    /* justify-content     : center; */
+    padding-top: 10px;
+    padding-left: 20px;
+}
+.categoryBackground .name:hover {
+    color: wheat;
+}
+.categoryBackground img {
+    width: 30px;
+    margin-bottom: 10px;
+}
+
+
+
 .post {
     min-width           : var(--hc-min-width);
     max-width           : var(--hc-max-width);
@@ -182,4 +208,11 @@ p {
 
     padding             : 0px;
     margin              : 0px;
+}
+a {
+    text-decoration: none;
+    color: rgb(90, 90, 90);
+}
+a:hover {
+    color: wheat;
 }

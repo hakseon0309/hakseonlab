@@ -219,6 +219,22 @@
 .aberrusStrategyText1 {
     font-size: 1.5rem;
 }
+.aberrusPhase {
+    background-color: rgb(15, 15, 15);
+    padding: 20px;
+}
+.aberrusPhaseText {
+    background-color: var(--hc-color-aberrus-bg-1);
+    width: 150px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.aberrusMainImg1 {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+}
 
 
 /* -------------------------------------------------- */

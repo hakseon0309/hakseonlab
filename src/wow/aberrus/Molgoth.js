@@ -65,6 +65,10 @@ function AberrusBarInsertIntro() {
             title="유용함 : "
             desc="드루이드의 쇄도의 포효, 주술사의 바람 질주 토템, 흑마법사의 악마의 관문"
             />
+            <AberrusInsertBox0
+            title="중요 : "
+            desc="1 페이즈에서 두 보스의 생명력을 나란히 50%로 감소시키기"
+            />
         </div>
     )
 }
@@ -75,37 +79,37 @@ function AberrusBarInsertMechanic() {
                 <AberrusInsertBox2
                 img="spell_shadow_deathsembrace"
                 title="타락의 어둠"
-                desc="50m 내 모든 대상에게 5초마다 타락의 어둠을 부여합니다."
+                desc="보라색 보스는 50m 내 모든 대상에게 5초마다 타락의 어둠을 부여합니다. 이는 중첩당 20초동안 최대 생명력이 1% 감소하고 피해를 입습니다."
                 />
                 <AberrusInsertBox2
                 img="ability_warlock_fireandbrimstone"
                 title="타오르는 열기"
-                desc="50m 내 모든 대상에게 20초동안 5초마다 피해를 입는 디버프를 부여합니다."
+                desc="노란색 보스는 50m 내 모든 대상에게 5초마다 피해를 입는 디버프를 부여합니다. 이는 중첩됩니다."
                 />
                 <AberrusInsertBox2
                 img="inv_icon_shadowcouncilorb_purple"
                 title="응결되는 공허"
-                desc="무작위 대상 위치에 50m 내 모든 대상에게 큰 피해를 입히는 폭탄을 생성합니다."
+                desc="폭탄이 설치되고 5초뒤에 폭발합니다. 주변을 끌어당기며 멀어질수록 피해가 감소합니다."
                 />
                 <AberrusInsertBox2
                 img="spell_mage_meteor"
                 title="불타는 유성"
-                desc="여러 대상이 같이 맞아야하는 대형 바닥입니다."
+                desc="여러 대상이 같이 맞아야하는 대형 바닥입니다. 탱커와 근딜이 같이 맞습니다."
                 />
                 <AberrusInsertBox2
                 img="spell_shadow_shadowfury"
                 title="암영의 폭발"
-                desc="무작위 여러 대상에게 6초 후 8m 바닥을 생성하는 디버프를 부여합니다."
+                desc="여러 대상에게 곧 바닥이 깔리는 디버프를 부여합니다. 밖에 나가서 깔고 오면 됩니다."
                 />
                 <AberrusInsertBox2
                 img="ability_rhyolith_volcano"
                 title="타오르는 폭발"
-                desc="여러 바닥이 생성되고 모두 막아야 합니다."
+                desc="여러 바닥이 생성되고 모두 최소 한명씩 막아야 합니다."
                 />
                 <AberrusInsertBox2
                 img="spell_priest_shadoworbs"
                 title="어둠의 합일"
-                desc="다방면에서 그림자의 정수 쪽으로 향하는 구체를 생성합니다."
+                desc="다방면에서 그림자의 정수 쪽으로 향하는 구체를 생성합니다. 이동해서 피하면 됩니다."
                 />
                 <AberrusInsertBox2
                 img="spell_shaman_lavasurge"
@@ -126,17 +130,17 @@ function AberrusBarInsertMechanic() {
             <AberrusInsertBox1
             img="inv_shadowflame_debuff"
             title="암흑불길 오염"
-            desc="모든 플레이어에게 10초마다 중첩되는 디버프를 부여합니다."
+            desc="모든 플레이어에게 10초마다 중첩되는 디버프를 부여합니다. 이는 최대 생명력을 1% 감소시키고, 2초마다 피해를 입힙니다."
             />
             <AberrusInsertBox1
             img="inv_shadowflame_nova"
             title="암울한 겁화"
-            desc="5명 이상의 대상이 나눠 맞아야하는 대형 바닥을 생성합니다."
+            desc="5명 이상의 대상이 나눠 맞아야하는 대형 바닥을 생성합니다. 이후 모두를 끌어당기는 바닥을 생성하는데, 멀리 떨어질수록 받는 피해가 감소합니다."
             />
             <AberrusInsertBox1
             img="inv_shadowflame_groundstate"
             title="맹렬한 황혼"
-            desc="모든 플레이어에게 10초마다 중첩되는 디버프를 부여합니다."
+            desc="여러 대상에게 6초 후에 폭발하며 바닥을 남기고, 바깥쪽으로 소용돌이를 발사하는 디버프를 부여합니다. 밖에 깔고 오면 됩니다."
             />
             <AberrusInsertBox1
             img="inv_chaos_orb"
@@ -146,7 +150,7 @@ function AberrusBarInsertMechanic() {
             <AberrusInsertBox1
             img="inv_shadowflame_buff"
             title="쇠약의 약점"
-            desc="탱커에게 큰 물리 피해를 입히고, 암흑불길 폭발로 받는 피해를 200% 증가시킵니다."
+            desc="탱커에게 큰 물리 피해를 입히고, 암흑불길 폭발로 받는 피해를 200% 증가시킵니다. 먼저 디버프를 부여하고 브레스를 쏘는데 이 사이에 다른 탱커가 도발합니다."
             />
         </div>
     )
@@ -154,35 +158,34 @@ function AberrusBarInsertMechanic() {
 function AberrusBarInsertStrategy() {
     return (
         <div className="aberrusBarInsert">
-
-            <div className="strategy">
-                <p className="txt-big mt-0">시작 진형</p>
-                <img src="https://www.method.gg/images/guides/uploads/kazzara-the-hellforged-opening-position.jpg" alt=""/>
-                <p>
-                    탱커는 보스 위치에서 머리 방향만 반대쪽으로 돌리며 시작합니다. 전방 기술은 없지만 공격대원이 지옥 광선을 인식하는데 도움이 됩니다. 탱커 디버프는 1 중첩 교대합니다.
-                </p>
-                <p>
-                    전투 시작 직후 피의 욕망을 사용합니다. 공격대원은 약 산개 진형으로 균열과 레이저에 대비합니다.
-                </p>
-                <p>
-                    지옥강철 학살 이후 생기는 작은 소형 바닥인 지옥강철 파편과 망령의 피의 데미지가 강력하므로, 반드시 회피합니다.
-                </p>
-                <p>
-                    지옥강철 파편은 지옥강철 학살때만 생성되고, 망령의 피는 전투 내내 지속적으로 생성됩니다.
-                </p>
-                <p>
-                    레이저의 대상이 되면 공포의 균열로 유도해서 레이저를 제거합니다. 공간이 여유롭기 때문에 적당한 위치에 균열을 위치시키고 레이저를 제거해 동선 낭비를 줄입니다.
-                </p>
-                <p>
-                    기력이 100이 되기 전, 미리 전방 숨결 공격에 대비하고, 회피합니다.
-                </p>
-                <p>
-                    멸종의 날개는 넉백 기술이므로 시전시 캐릭터의 뒤를 확인합니다.
-                </p>
-                <p className="mb-0">
-                    카자라의 생명력이 40% 이하가 되면 공격대 피해가 많이 증가하니, 생존에 조심하세요.
-                </p>
-            </div>
+            <img src="https://www.method.gg/images/guides/uploads/the-amalgamation-chamber-phase-1-positions.jpg" alt=""/>
+            <p>
+                공격대를 두 그룹으로 나눕니다.<br/>
+                보스의 이름은 그림자의 정수와 영원한 불길이지만 편의상 보라색과 노란색이라고 합니다.
+            </p>
+            <p>
+                보라색 팀은 원딜 위주로 구성을 하면 좋습니다. 나가서 바닥을 깔고 구슬을 피하며, 멀리 빠지면 받는 피해가 감소하는 스킬들을 대처하기 때문입니다.
+            </p>
+            <p>
+                노란색 팀은 근딜 위주로 구성을 하면 좋습니다. 소용돌이 발사를 피하고, 탱커와 함께 같이 맞는 바닥과, 한명 한명 모두 막아야 하는 바닥을 대처하면 됩니다.
+            </p>
+            <p>
+                딜이 충분하다면 1페이즈에서 두 보스를 스왑하지 않고 빠르게 1페이즈를 끝내는 방식이 좋습니다.
+                그렇지 않다면 탱커끼리 보스만 한번 스왑하면 편합니다.
+            </p>
+            <p>
+                2단계는 두 보스 중 하나라도 50%가 되면 넘어가며, 두 보스의 생명력 평균으로 2단계 보스가 생성됩니다.
+            </p>
+            <p>
+                2단계 보스는 두 보스의 스킬을 합한 패턴입니다.
+            </p>
+            <img src="https://www.method.gg/images/guides/uploads/the-amalgamation-chamber-phase-2-positions.jpg" alt=""/>
+            <p>
+                2페이즈가 시작되면 방 중앙에 약산개하여 모이고 타임어택이 시작됩니다. 디버프는 이제 사라지지 않고 계속 중첩됩니다.
+            </p>
+            <p>
+                중간 중간 멀리 떨어져야하는 바닥이 생기기 때문에, 이동 속도 지원기나 관문이 유용하게 사용됩니다.
+            </p>
 
         </div>
     )

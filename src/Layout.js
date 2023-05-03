@@ -28,12 +28,13 @@ export function Aside() {
                     <div>
                         <div className="character monk">학선양</div>
                         <div className="server">KR-Azshara</div>
-                    </div>    
+                    </div>
                 </div>
             </div>
             <div className="category">
-                <div className="background">
-
+                <div className="categoryBackground">
+                    <a href="http://localhost:3000"><div className="categoryText">About</div></a>
+                    <a href="http://localhost:3000/aberrus"><div className="categoryText">World of Warcraft</div></a>
                 </div>
             </div>
         </aside>
@@ -45,7 +46,7 @@ export function Main() {
         <div className="post">
             <BrowserRouter>
                 <Routes>
-                    <Route path="/"            element={<Aberrus    />}/>
+                    {/* <Route path="/"            element={<About      />}/> */}
                     <Route path="/aberrus"     element={<Aberrus    />}/>
                     <Route path="/kazzara"     element={<Kazzara    />}/>
                     <Route path="/molgoth"     element={<Molgoth    />}/>

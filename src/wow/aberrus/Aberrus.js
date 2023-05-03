@@ -9,6 +9,7 @@ import {
     AberrusNext,
     Mechanic,
     MechanicSub,
+    AberrusInsertBox0,
 } from "./AberrusLayout"
 import Roster from "./Roster"
 import "./Aberrus.css"
@@ -20,14 +21,11 @@ export default function Aberrus() {
             <div className="content">
                 <AberrusNav number={0}/>
                 <AberrusTitle
-                name={"WOW LIFE BALANCE"}
-                />                
-                <AberrusBar name="인원 구성"/>
-                <AberrusBarInsertIntro/>
-                <AberrusNext
-                next="다음 던전"
-                name="v 10.2"
+                name={"WLB 10.1"}
                 />
+                <AberrusBarInsertWLB/>
+                {/* <AberrusBar name="인원 구성"/>
+                <AberrusBarInsertIntro/> */}
             </div>
         </div>
     )
@@ -39,6 +37,25 @@ function AberrusBarInsertIntro() {
             <div className="aberrusBarInsertInsert">
                 <Roster/>
             </div>
+        </div>
+    )
+}
+function AberrusBarInsertWLB() {
+    return (
+        <div className="aberrusBarInsert">
+            <AberrusInsertBox0
+            title="레이드 오픈 : "
+            desc="2023년 5월 11일"
+            />
+            <AberrusInsertBox0
+            title="보스 개체수 : "
+            desc="9"
+            />
+            <AberrusInsertBox0
+            title="아이템 레벨"
+            />
+            <img className="aberrusMainImg1" src="https://cdn.imweb.me/upload/S201903225c9441f9db892/10bf1cd36ad2c.png" alt=""/>
+            <img className="aberrusMainImg1" src="https://cdn.imweb.me/upload/S201903225c9441f9db892/7910f4b3d7b2f.png" alt=""/>
         </div>
     )
 }
